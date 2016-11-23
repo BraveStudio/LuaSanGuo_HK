@@ -1,0 +1,12 @@
+顺序	任务描述	资源路径	奖励点数	完成次数	文字	跳转类型	空行
+1	出征任務：通過任意副本10次	tyj/ui_res/TaskUI/czrw.png	15	10	获得奖励：15点活跃度	4	
+2	招募神將：任意招募一個武將	tyj/ui_res/TaskUI/zmsj.png	15	1	获得奖励：15点活跃度	10	
+3	武將升級：升級任意武將1次	tyj/ui_res/TaskUI/wjsj.png	10	1	获得奖励：10点活跃度	2	
+4	士兵強化：強化任意士兵1次	tyj/ui_res/TaskUI/sbqh.png	5	1	获得奖励：5点活跃度	3	
+5	精英關卡：挑戰任意精英關卡5次	tyj/ui_res/TaskUI/jygq.png	15	5	获得奖励：15点活跃度	7	
+6	天梯競技場：進行3次天梯挑戰	tyj/ui_res/TaskUI/ttjjc.png	15	3	获得奖励：15点活跃度	5	
+7	主城任務：任意完成一次主城日常任務	tyj/ui_res/TaskUI/zcrw.png	10	1	获得奖励：10点活跃度	1	
+8	七星壇：操作洗印1次	tyj/ui_res/TaskUI/qxt.png	15	1	获得奖励：15点活跃度	9	
+9	團隊副本：挑戰團隊副本1次	tyj/ui_res/TaskUI/tdfb.png	20	1	获得奖励：20点活跃度	8	
+10	英雄試練：通關英雄試練一次	tyj/ui_res/TaskUI/yxsl.png	10	1	获得奖励：10点活跃度	11	
+11	血戰洛陽：挑戰血戰洛陽1次	tyj/ui_res/TaskUI/xzly.png	10	1	获得奖励：10点活跃度	6	

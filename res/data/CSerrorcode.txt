@@ -1,0 +1,251 @@
+索引	英文标注	中文	韩文	港澳台	空行
+1	OK	执行操作成功	변경 성공	執行操作成功	
+2	Error	对不起，出现错误了，请尝试其他操作或者重新登录游戏再继续吧。	재 로그인 하세요	對不起，出現錯誤了，請嘗試其他操作或者重新登錄遊戲再繼續吧。	
+3	GFalse	不允许执行该操作	요청한 작업을 실행할 수 없습니다	不允許執行該操作	
+7	ForeverLoopError	循环意外出错	예상치 못한 오류 순환	迴圈意外出錯	
+10	ConfigError	配置错误	오류 배치	配置錯誤	
+15	LevelMax	等级达到最高	최대 레벨을 달성하였습니다.	等級達到最高	
+16	LackGold	缺少元宝	원보가 부족합니다.	缺少元寶	
+17	LackMoney	缺少金币	은전이 부족합니다.	缺少金幣	
+18	LackEnergy	缺少体力	체력부족	缺少體力	
+19	PassLimit	关联关卡未通过	해당 던전을 통과하지 않았습니다	關聯關卡未通過	
+20	LackFight	缺少战斗力	전투력 부족	缺少戰鬥力	
+21	LackItem	缺少物品	아이템 부족	缺少物品	
+22	FighterAmountMax	可装备战斗角色卡数量达到最大	장비전투 가능 무장 수가 최대치에 도달했습니다	可裝備戰鬥角色卡數量達到最大	
+23	FighterSoltFull	战斗位置已有角色卡	전투란에 이미 무장 카드가 있습니다	戰鬥位置已有角色卡	
+24	LackFighterSlot	缺少可用角色卡位置	사용 가능한 무장 카드란이 부족합니다	缺少可用角色卡位置	
+25	FighterSlotEmpty	战斗位置为空	전투칸이 비었습니다	戰鬥位置為空	
+26	EquipSlotEmpty	装备位置为空	장비카이 비었습니다	裝備位置為空	
+27	SkillSlotEmpty	技能位置为空	스킬칸이 비었습니다	技能位置為空	
+28	LackEquipSlot	缺少可用装备卡位置	사용 가능한 장비카드란이 부족합니다	缺少可用裝備卡位置	
+29	LackSkillSlot	缺少可用技能卡位置	사용 가능한 스킬카드란이 부족합니다	缺少可用技能卡位置	
+30	EquipAmountMax	可装备装备卡数量达到最大	적용 가능한 장비카드 수가 최대치에 도달했습니다	可裝備裝備卡數量達到最大	
+31	SkillAmountMax	可装备技能卡数量达到最大	적용 가능한 스킬카드 수가 최대치에 도달했습니다	可裝備技能卡數量達到最大	
+40	CardIDInvalid	卡片id无效，卡牌配置表无对于id	카드 id 무효. 카드 배치표와 id가 불일치합니다	卡片id無效，卡牌配置表無對於id	
+50	DailyLimit	每日限制	해당 던전의 일일 도전 가능 횟수를 모두 사용하였습니다.	每日限制	
+51	LevelLimit	等级限制	레벨 제한	等級限制	
+52	TimeLimit	时间限制	시간 제한	時間限制	
+53	FightLimit	战斗力限制	전투력 제한	戰鬥力限制	
+54	MopTokenLack	扫荡令不足	소탕패 부족	掃蕩令不足	
+60	BagTypeError	背包类型错误，只有四种背包类型	가방 타입 오류. 가방 타입은 4가지 뿐입니다.	背包類型錯誤，只有四種背包類型	
+61	ItemSlotError	物品位置错误，该位置超出了最大背包数	아이템란 오류. 해당 위치는 최대 가방 수를 초과했습니다	物品位置錯誤，該位置超出了最大背包數	
+62	SlotHasNoItem	Slot位置上没有物品	슬롯란에 아이템이 없습니다	Slot位置上沒有物品	
+63	SlotHasItem	该位置上已有物品	해당 란에 이미 아이템이 있습니다	該位置上已有物品	
+64	AboveItemOverlap	超出物品最大叠加数	아이템 최대 중복 수를 초과했습니다	超出物品最大疊加數	
+65	BagFull	背包已满	더 이상 보유할 수 없습니다.	背包已滿	
+66	BagNotEnough	武将已满，请清理	무장이 가득 찼습니다. 	武將已滿，請清理	
+67	GoodsNotEnough	物品不够	재료가 부족합니다.	物品不夠	
+68	ItemNoUseFunc	物品没有配置使用函数	아이템 배치 사용 함수가 없습니다	物品沒有配置使用函數	
+69	NotDeleteItem	使用物品后不用删除物品	아이템 사용 후 삭제할 필요가 없습니다	使用物品後不用刪除物品	
+70	IndexOutOfRange	索引超出范围	색인 범위 초과	索引超出範圍	
+71	LevelFull	满级	경험치가 다 찼습니다	滿級	
+72	ItemDailyLimitFull	该道具每日使用次数已满	해당 도구의 매일 사용횟수가 다 찼습니다	該道具每日使用次數已滿	
+73	ItemDailyLimitFullVip	该道具每日使用次数已满，提升vip等级可以增加每日使用次数	해당 도구의 매일 사용횟수가 다 찼습니다. Vip 레벨을 올리면 매일 사용횟수를 늘릴 수 있습니다	該道具每日使用次數已滿，提升vip等級可以增加每日使用次數	
+74	ItemLimitLevel	等级	레벨	等級	
+80	PlayerLevelLack	武将等级不足	무장레벨이 부족합니다	武將等級不足	
+81	LevelLack	等级不足	레벨부족	等級不足	
+86	BuildingResNotEnough	资源不够	자원이 모자랍니다	資源不夠	
+103	CannotStrengthen	无法强化(系统不允许)	강화할 수 없습니다(시스템 거부)	無法強化(系統不允許)	
+104	LevelNotEnough	等级不足以进行该操作	레벨이 부족해 해당 조작을 실행할 수 없습니다	等級不足以進行該操作	
+105	CardLack	武将不足	무장이 부족합니다	武將不足	
+130	GoodsInfoNotRight	购买物品与服务器不一致，要求客户端重新打开商城面板进行购买	구입한 아이템과 서버가 일치하지 않습니다. 클라이언트를 다시 열어 상점에서 다시 구매해주세요	購買物品與伺服器不一致，要求客戶端重新打開商城面板進行購買	
+131	GoodsBuyFull	物品购买数量已满	아이템 구매량이 다 찼습니다	物品購買數量已滿	
+132	GoodsNotBuyNext	等级或者vip等级不够，不允许购买下一级物品	레벨 또는 vip 레벨이 부족해 다음 레벨 아이템을 구입할 수 없습니다	等級或者vip等級不夠，不允許購買下一級物品	
+133	GoodsLackVip	vip等级不够，不允许购买物品	vip레벨이 모자라 아이템을 구매할 수 없습니다	vip等級不夠，不允許購買物品	
+134	GoodsRefreshNoEnough	刷新令不足	갱신패가 부족합니다	刷新令不足	
+135	GoodsRefreshLack	刷新次数不足	갱신 횟수가 부족합니다	刷新次數不足	
+181	PVPPlayerNotExists	玩家不存在	존재하지 않는 유저입니다	玩家不存在	
+182	PVPInFight	玩家正在被攻击	유저가 공격을 받고 있습니다	玩家正在被攻擊	
+280	SellRoleAlreadyEquip	角色卡已上阵	해당 무장은 이미 출전 중입니다.	角色卡已上陣	
+320	FragLack	碎片数量不够合成	합성에 필요한 조각수가 부족 합니다	碎片數量不夠合成	
+321	FragIDToSlotInvalid	碎片ID无对应的图鉴slot	조각 ID가 대응되지 않는 도감 slot입니다	碎片ID無對應的圖鑒slot	
+340	VipPassCountFull	当日vip刷新关卡数已满	당일 VIP던전 새로고침 가능 횟수를 초과하였습니다	當日vip刷新關卡數已滿	
+341	VipLackRecharge	没有充值过	충전 이력이 없습니다	沒有充值過	
+342	VipPvpCountFull	当日vip刷新pvp数已满	해당VIP레벨의 PVP도전 갱신 횟수를 초과하였습니다	當日vip刷新pvp數已滿	
+343	VipRechargeNotEnough	充值不足	충전 부족	充值不足	
+344	VipAlreadyGet	已经领取过奖励	이미 보너스를 받으셨습니다	已經領取過獎勵	
+360	ACTAlreadyGetLV	已经领取了vip	이미 VIP권한을 획득하셨습니다	已經領取了vip	
+361	ACTAlreadyGetTE	已经领取了体力	이미 체력을 획득하셨습니다	已經領取了體力	
+362	ACTTimeOutTE	不在领取时间	수령시간에 없습니다	不在領取時間	
+363	ACTRefreshFullEM	金币刷新次数满了	은전 갱신횟수를 모두 사용하였습니다	金幣刷新次數滿了	
+364	ACTRefreshFullEG	元宝刷新次数满了	원보 갱신횟수를 모두 사용하였습니다	元寶刷新次數滿了	
+365	ACTRefreshCDEM	金币刷新cd	은전 갱신 쿨타입 진행중	金幣刷新cd	
+366	ACTRefreshCDEG	元宝刷新cd	원보 갱신 쿨타입 진행중	元寶刷新cd	
+367	ACTExchangeFullEM	金币兑换次数满了	은전 환전횟수를 모두 사용하였습니다	金幣兌換次數滿了	
+368	ACTExchangeFullEG	元宝兑换次数满了	원보 환전횟수를 모두 사용하였습니다	元寶兌換次數滿了	
+369	ACTLackRefreshEM	还未刷新	아직 갱신하지 않았습니다	還未刷新	
+370	ACTLackRefreshEG	还未刷新	아직 갱신하지 않았습니다	還未刷新	
+371	ACTLackLv	活动等级不到	활동 레벨이 모자랍니다	活動等級不到	
+372	ACTNOOPEN	活动未开启	열리지 않은 이벤트입니다	活動未開啟	
+404	FuncNotOpenLoginSample	登陆领奖活动功能暂未开放	로그인 상품 이벤트 기능이 아직 열리지 않았습니다	登陸領獎活動功能暫未開放	
+405	FuncNotOpenSampleCard	抽卡活动功能暂未开放	카드 뽑기 이벤트 기능이 아직 열리지 않았습니다	抽卡活動功能暫未開放	
+420	AutoFightLackLevel	自动战斗等级不够	자동 전투에 필요한 레벨이 모자랍니다	自動戰鬥等級不夠	
+422	EnergyFull	体力已满，无法获得体力	더 이상 활력을 획득할 수 없습니다	體力已滿，無法獲得體力	
+501	SoldierLevelFull	士兵强化等级已满不能升级	병사 레벨이 최대치기 때문에 레벨업을 할 수 없습니다	士兵強化等級已滿不能升級	
+502	SoldierLevelNotFull	士兵强化等级未满不能升阶	병사 레벨이 낮아 진화 할 수 없습니다.	士兵強化等級未滿不能升階	
+504	LackSoul	缺少武魂	무혼이 부족합니다.	缺少武魂	
+505	ClassFull	阶数已满	스테이지 수가 다 찼습니다	階數已滿	
+506	QualityNotLegal	卡牌品质不合法	부적합한 무장 카드 입니다.	卡牌品質不合法	
+509	FuncNotOpen	当前功能暂未开放	현재 기능이 아직 열리지 않았습니다	當前功能暫未開放	
+510	LackTianTiCount	缺少天梯挑战次数	천계 도전 횟수 부족	缺少天梯挑戰次數	
+511	LackTianTiVipCount	缺少天梯挑战VIP购买次数	천계 도전 VIP 구매횟수 부족	缺少天梯挑戰VIP購買次數	
+512	LackLevel	缺少等级	레벨 부족	缺少等級	
+513	NameRepeat	重名	이미 사용중인 군주명입니다.	重名	
+514	NameIllegal	名字不合法	사용할 수 없는 명칭입니다.	名字不合法	
+515	AltarFull	天梯已满	천계가 다 찼습니다	天梯已滿	
+517	AltarBoxNotOpen	对应的印没有开启	해당 등급의 각성이 활성화 되지 않았습니다	對應的印沒有開啟	
+518	AltarNoBox	等级不足，没有可刷的印位	등급이 낮아 각성이 불가 합니다	等級不足，沒有可刷的印位	
+519	MsnAwardHadGot	任务已经领奖	임무 보너스를 이미 받았습니다	任務已經領獎	
+520	MsnLackOfScore	活力值不足，不能领取这个奖励	활력이 부족해 보상을 수령 할 수 없습니다.	活力值不足，不能領取這個獎勵	
+521	AwardAlreadyGet	已经领取过奖励	이미 보너스를 받으셨습니다	已經領取過獎勵	
+522	LackOfAward	领取奖励条件还不够	보너스 획득 조건을 다 채우지 못했습니다	領取獎勵條件還不夠	
+523	SSGoodsOver	物品已经购买完毕	아이템을 구매했습니다	物品已經購買完畢	
+524	SSLackScore	缺少积分	포인트 부족	缺少積分	
+525	NameTooLong	角色名过长	이름이 너무 깁니다.	角色名過長	
+526	NameNotNull	角色名不能为空	이름은 공백이 될 수 없습니다.	角色名不能為空	
+550	AlreadyFetched	物品已经领取	보상 획득 완료	物品已經領取	
+551	InvalidIndex	无效的索引	무효한 색인입니다	無效的索引	
+560	NotAvailableToday	此类型英雄试练在今天无效	이 타입의 무장훈련은 오늘 무효합니다	此類型英雄試練在今天無效	
+561	RoleCardAwarded	此卡片已获得	이미 얻은 카드입니다	此卡片已獲得	
+562	TrailEnergyLack	体力不足	체력이 부족합니다	體力不足	
+563	StrenthSFail	强化士兵失败	병사 강화 실패	強化士兵失敗	
+570	LackCount	您暂时不满足该操作的条件	수정 가능한 조건이 아닙니다. 	您暫時不滿足該操作的條件	
+580	GuildAlreadyRequestGuild	已经申请加入该公会	이미 해당 길드에 가입신청을 하셨습니다	已經申請加入該公會	
+581	GuildNotExists	公会不存在	존재하지 않는 길드입니다	公會不存在	
+582	GuildCannotJoin	不能加入该公会	해당 길드에 가입할 수 없습니다	不能加入該公會	
+583	GuildRequestCountMax	公会请求人数已满	길드 신청자수가 다 찼습니다	公會請求人數已滿	
+584	GuildThisDayRequestMax	当天请求加入公会数量已满	오늘은 더 이상 길드 가입을 신청할 수 없습니다.	當天請求加入公會數量已滿	
+585	GuildAlreadyJoinedGuild	已经加入公会	이미 길드에 가입했습니다	已經加入公會	
+586	GuildCannotFindGuild	无法找到指定公会	해당 길드를 찾을 수 없습니다	無法找到指定公會	
+587	GuildNameLengthOverFlow	会公名字过长	길드 이름이 너무 깁니다	會公名字過長	
+588	GuildNotEnoughGold	元宝不足	원보가 부족합니다.	元寶不足	
+589	GuildDidNotJoinGuild	没有加入任何公会	가입 신청하였습니다. 길드장 승인 후 가입됩니다.	沒有加入任何公會	
+590	GuildNotEnoughAuth	没有足够的权限	해당 권한이 없습니다	沒有足夠的許可權	
+591	GuildHasOtherMember	还有其他的公会成员	다른 길드회원도 있습니다	還有其他的公會成員	
+592	GuildMailTitleLengthOverFlow	邮件标题过长	메일 제목이 너무 깁니다	郵件標題過長	
+593	GuildMailContentLengthOverFlow	邮件内容过长	메일 내용이 너무 깁니다	郵件內容過長	
+594	GuildNoticeLengthOverFlow	公告内容过长	공지 내용이 너무 깁니다	公告內容過長	
+595	GuildChatSoFast	聊天速度过快	다음 메시지는 잠시 후 발송 가능 합니다.	聊天速度過快	
+596	GuildChatMessageLengthOverFlow	聊天信息过长	메시지 내용이 너무 깁니다	聊天資訊過長	
+597	GuildPlayerNotInRequestList	不在请求列表之中	요청표에 없습니다	不在請求列表之中	
+598	GuildPlayerNotInGuild	不在公会之中	길드에 없습니다	不在公會之中	
+599	GuildCannotDoOnSelf	不能操作自己	자신은 조작할 수 없습니다	不能操作自己	
+600	GuildElderCountMax	公会长老数量已满	길드 장로수가 다 찼습니다	公會長老數量已滿	
+601	GuildCannotWorshipSelf	不能膜拜自己	자신에게 문안할 수 없습니다	不能膜拜自己	
+602	GuildCannotWorshipLowLevel	膜拜的大神等级必须高于自己	문안할 유저의 레벨은 반드시 자신보다 높아야 합니다	膜拜的大神等級必須高於自己	
+603	GuildTargetPlayerNotInGuild	目标玩家不在公会之中	타겟유저가 길드에 없습니다	目標玩家不在公會之中	
+604	GuildWorshipCountMax	膜拜次数超过限制	문안 횟수 제한을 초과했습니다	膜拜次數超過限制	
+605	GuildNameExists	公会名字已经存在	이미 존재하는 길드 이름입니다	公會名字已經存在	
+606	GuildMemberCountMax	公会人数已满	길드 회원이 다 찼습니다	公會人數已滿	
+607	GuildNoRewards	没有奖励	보너스가 없습니다	沒有獎勵	
+608	GuildWorshipMoneyLack	金币不足	은전이 부족합니다.	金幣不足	
+609	GuildTeamCopyOutRange	该关卡未开放	열리지 않은 관문입니다	該關卡未開放	
+610	GuildTeamCopyAlreadyOpen	副本已开启	던전이 열렸습니다	副本已開啟	
+611	GuildTeamCopyEliteNotPass	对应精英副本未通关	해당 정예던전을 아직 통과하지 못했습니다	對應精英副本未通關	
+612	GuildTeamCopyGuildAcitivyLack	公会活跃度不足	길드 활약도가 부족합니다	公會活躍度不足	
+613	GuildTeamCopyPrevLevelNotPassed	前一关未通关	이전 단계를 통과하지 않았습니다	前一關未通關	
+614	GuildTeamCopyNotPurchased	副本未购买	던전을 구매하지 않았습니다	副本未購買	
+615	GuildTeamCopyLocked	副本已通关	던전을 통과하셨습니다	副本已通關	
+616	GuildTeamCopyTimesOverFlow	团队副本总挑战次数已达上限	길드던전의 모든 도전 횟수가 이미 한계치에 도달했습니다	團隊副本總挑戰次數已達上限	
+617	GuildTeamCopyPlayerInBattle	有其他玩家正在战斗	다른 유저가 전투 중입니다	有其他玩家正在戰鬥	
+618	GuildAlreadyRequestItem	已经申请了该物品	이미 해당 아이템을 신청하셨습니다	已經申請了該物品	
+619	GuildPlayerNotInItemReqList	该玩家不在物品请求列表	아이템 신청표에 없는 유저입니다	該玩家不在物品請求列表	
+620	GuildDistributeTimesMax	分配物品次数超过最大值	아이템 분배 횟수가 최대치를 초과했습니다	分配物品次數超過最大值	
+621	GuildNotInItemRequestList	还未申请副本物品	아직 신청한 던전 아이템이 없습니다	還未申請副本物品	
+622	GuildNotEnoughMoney	金币不足	은전부족	金幣不足	
+623	GuildAlreadyFistPlace	已经在第一的位置	이미 첫번째 위치에 있습니다	已經在第一的位置	
+624	GuildTeamCopyPrevLevelNotBuy	前一关未购买	이전 단계를 먼저 구입하셔야 합니다	前一關未購買	
+625	GuildTeamCopyItemNotExists	物品不存在	아이템이 존재하지 않습니다	物品不存在	
+626	GuildTeamCopyItemLack	物品不足	아이템 부족	物品不足	
+627	GuildAlreadyJoinedGuildToday	今天已加入过公会	오늘 이미 길드에 가입하셨습니다	今天已加入過公會	
+628	GuildCountLack	副本挑战次数不足	던전 도전 횟수가 부족합니다	副本挑戰次數不足	
+629	GuildNotItems	该物品不存在	존재하지 않는 아이템입니다	該物品不存在	
+630	GuildActifFull	捐献次数已满	길드 기금 공헌 횟수가 최대치 입니다.	捐獻次數已滿	
+631	GuildActifLack	公会资金不足	길드 기금이 부족합니다.	公會資金不足	
+700	SoldierLvlTooBig	士兵等级不能超过主公等级！	병사의 레벨은 주공의 레벨보다 높을 수 없습니다!	士兵等級不能超過主公等級！	
+800	ChatSendMsgTooFast	消息发送速度过快	잠시 후, 발송 가능 합니다.	消息發送速度過快	
+801	ChatNoFreeChatCount	免费次数已经用完	무료 횟수를 모두 사용하셨습니다	免費次數已經用完	
+802	ChatNotEnoughGold	元宝不足	원보가 부족합니다.	元寶不足	
+803	ChatBan	用户被禁言	유저의 채팅기능이 차단되었습니다	用戶被禁言	
+850	BuyMoneyNotEnoughGold	金币不足	은전이 부족합니다.	金幣不足	
+900	StructureDoed	该武将已经做过任务了	해당 무장은 이미 임무를 완료하였습니다	該武將已經做過任務了	
+901	StructureGoldLack	元宝不足	원보가 부족합니다.	元寶不足	
+902	StructureNumError	今日任务次数以达到上限	오늘의 임무 횟수가 한계치에 도달했습니다	今日任務次數以達到上限	
+903	StructureDoing	武将正在执行任务	무장 임무 수행 중	武將正在執行任務	
+904	StructureFinish	任务已经完成	임무를 마쳤습니다	任務已經完成	
+905	StructureNoFinish	任务未完成	임무를 마치지 못했습니다	任務未完成	
+950	CardMaxLack	免费次数已达上限或免费抽取正在CD中	무료횟수를 사용 완료 하였거나 쿨타임 진행 중입니다.	免費次數已達上限或免費抽取正在CD中	
+1000	VipGetPass	礼包已领取或未到达领取要求	선물을 이미 획득하셨거나 획득 조건을 다 채우지 못했습니다	禮包已領取或未到達領取要求	
+1001	VipLevelLack	vip等级不足	VIP 레벨 부족	vip等級不足	
+1002	GrowUpBuyed	vip成长计划已经购买过了	VIP 성장기금을 이미 구매하셨습니다	vip成長計畫已經購買過了	
+1003	LevelLack	等级不够	레벨 부족	等級不夠	
+1004	BuyMoneyLack	购买金币次数以达上限	은전 구입 횟수가 한계치에 도달했습니다	購買金幣次數以達上限	
+1005	BuyEnergyLack	购买体力次数已达上限	체력 구매 횟수가 한계치에 도달했습니다	購買體力次數已達上限	
+1006	ResetPassLack	重置关卡次数不足	던전 갱신 횟수가 부족합니다	重置關卡次數不足	
+1007	ResetTiantiLack	购买pvp次数以达上限	pvp 구입 횟수가 한계치에 도달했습니다	購買pvp次數以達上限	
+1008	VipGrowUpNoBuy	未购买成长计划	성장기금을 구매하지 않았습니다	未購買成長計畫	
+1050	BoxNoNeedGrid	开出宝箱的物品不占格子	보물상자에서 나온 아이템은 칸에 들어가지 않습니다	開出寶箱的物品不占格子	
+1051	LackHunjing	缺少魂晶	수정이 부족합니다	缺少魂晶	
+1060	LackTTScore	缺少天梯积分	천계포인트부족	缺少天梯積分	
+1071	CDKeyNotExist	兑换码不存在	존재하지 않는 쿠폰 번호 입니다.	兌換碼不存在	
+1072	CDKeyNoNum	兑换码使用次数已用完	이미 사용한 쿠폰 입니다.	兌換碼使用次數已用完	
+1073	CDKeyOutData	兑换码已过期	교환 코드 사용기간이 만료되었습니다.	兌換碼已過期	
+1074	CDKeyNonData	兑换码未到使用时间	쿠폰 사용 기간이 아닙니다.	兌換碼未到使用時間	
+1075	CDKeyUsed	兑换码已使用过了	이미 사용한 쿠폰 입니다.	兌換碼已使用過了	
+1076	paramError	参数传递错误	파라미터 전송 오류	參數傳遞錯誤	
+1077	EquipNoStreng	该装备不能强化	파라미터 전송 오류	該裝備不能強化	
+1078	UseOtherPlaytype	已经使用了其他平台的兑换码	해당 쿠폰은 이미 사용되었거나 중복사용 불가 쿠폰 입니다.	已經使用了其他平臺的兌換碼	
+1079	playTypeError	平台类型错误	해당 스토어 버전에서는 사용할 수 없습니다.	平臺類型錯誤	
+1100	NoOpenCity	该城未开启争夺战	해당 성의 쟁탈전은 미오픈 상태 입니다.	該城未開啟爭奪戰	
+1101	NotBidTime	未到竞价时间	입찰 가능 시간이 아닙니다.	未到競價時間	
+1102	BidLow	竞价过低	입찰가격이 낮습니다.	競價過低	
+1103	noAttatrTime	未到攻城时间	길드전 시간이 아닙니다.	未到攻城時間	
+1104	noCanJoinfight	所在公会不能参加对该城的争夺	소속된 길드는 쟁탈전에 참여할 수 없습니다.	所在公會不能參加對該城的爭奪	
+1105	resurgenceCD	复活冷却中	부활대기중입니다.	復活冷卻中	
+1106	NoAttSelf	不能攻击己方建筑	같은편을 공격할 수 없습니다.	不能攻擊己方建築	
+1107	NogetgvgReward	不能领取其他公会的奖励	타 길드의 보상은 획득할 수 없습니다.	不能領取其他公會的獎勵	
+1108	noNeedLive	英雄没有死亡不需要复活	무장이 사망상태가 아니므로 부활할 필요가 없습니다	英雄沒有死亡不需要復活	
+1109	isFighting	该城正在被攻击	해당 성이 공격받는 중입니다.	該城正在被攻擊	
+1110	bidNeedOnly	你只能同时竞价一座城	동시에 한 성에만 입찰 가능합니다.	你只能同時競價一座城	
+1111	JoinOneCity	只能参加一个攻城战	하나의 공성전에만 참가 가능합니다.	只能參加壹個攻城戰	
+1112	noCanTransfer	公会战奖励未领取，不能转让会长	길드전 보상을 수령하지 않아 임명할 수 없습니다.	公會戰獎勵未領取，不能轉讓會長	
+1113	noNL	能量不足	기력 부족	能量不足	
+1114	noActif	贡献不足	공헌도가 부족합니다.	貢獻不足	
+1115	guildlevelless	公会等级不足	길드 레별이 부족합니다.	公會等級不足	
+1116	buycountLack	购买次数不足	구매 횟수가 부족합니다.	購買次數不足	
+1117	nojoingvgBattle	加入公会当天，不能参加公会战	길드 가입 당일엔 참여할 수 없습니다.	加入公會當天，不能參加公會戰	
+1118	nogetgvgReward	加入公会当天，不能领取奖励	길드 가입 당일엔 수령할 수 없습니다.	加入公會當天，不能領取獎勵	
+1150	joinLimit	退出公会24小时，不能再加入其它公会	길드 탈퇴 24시간 이후에 다른 길드에 가입 가능합니다.	退出公會24小時，不能再加入其他公會	
+1200	haveCamp	国家已选择	나라를 선택하였습니다.	國家已選擇	
+1201	peopleTooMuch	该国人口过多，请重新选择	선택하신 나라는 인구가 너무 많습니다. 다시 선택 하십시오.	該國人口過多，請重新選擇	
+1202	GZcountLack	今日攻打次数已用尽	당일 공격 횟수가 부족합니다.	今日攻打次數已用盡	
+1203	citynoXL	只能攻击势力相邻的城池	자신의 세력과 인접한 도성만 공격할 수 있습니다.	只能攻擊勢力相鄰的城池	
+1204	noAttSelfCamp	不能攻击己方势力	같은 세력을 공격할 수 없습니다.	不能攻擊己方勢力	
+1205	noFL	俸禄不足	봉록이 부족합니다.	俸祿不足	
+1206	noCanbug	所在势力未获得该物品的购买权	소속 세력은 해당 아이템의 구매 특권이 없습니다.	所在勢力未獲得該物品的購買權	
+1207	noapply	该城不能申请援军	해당 도성은 원군을 신청할 수 없습니다.	該城不能申請援軍	
+1208	fighting	该城处于争夺状态不能申请援军	해당 도성은 현재 쟁탈전이 진행되고 있습니다. 원군을 신청할 수 없습니다.	該城處於爭奪狀態不能申請援軍	
+1209	boostfull	援军已满	원군수가 다 찼습니다	援軍已滿	
+1210	haveRelie	援军只能申请一座	하나의 도성의 원군을 신청할 수 밖에 없습니다.	援軍只能申請一座	
+1211	applyed	已申请	신청 하였습니다.	已申請	
+1212	offerTall	该玩家已获得更高职位	해당 유저는 더 높은 직위를 맡고 있습니다.	該玩家已獲得更高職位	
+1213	ttZeroNotDef	天梯排名为0或没有防御阵型不能参战	천계랭킹 0순위 혹은 방어진형이 배치 되지 않았을때 전투를 도전할 수 없습니다.	天梯排名為0或沒有防禦陣型不能參戰	
+1214	nonation	没有国家	소속 세력이 없습니다.	沒有國家	
+1215	noCanExit	你已成为该国顾命大臣,不能叛国	고명 대신은 소속 세력에서 탈퇴할 수 없습니다.	你已成爲該國顧命大臣,不能叛國	
+1216	haveteamid	城主不能叛国	성주는 소속 세력에서 탈퇴할 수 없습니다.	城主不能叛國	
+1217	ownnoboost	城主不能申请援军	성주는 원군을 신청할 수 없습니다.	城主不能申請援軍	
+1218	noAttCapital	首都不可被攻击 	수도를 공격할 수 없습니다.	首都不可被攻擊	
+1219	battleTimeout	战斗超时	유효 전투시간 초과	戰鬥超時	
+1220	battleStorm	城池已被攻陷	도성은 함락 되었습니다.	城池已被攻陷	
+1221	againselectcamp	数据出错，请退出游戏，重新选择国家	예상치 못한 오류가 발생하였습니다, 게임 재접속 후 다시 국가를 선택하십시오.	數據出錯，請退出遊戲，重新選擇國家	
+1222	protectState	该城处于保护状态	보호유지시간에는 공격할 수 없습니다.	該城處于保護狀態	
+1223	TimeNot	不是争夺时间	쟁탈 가능 시간이 아닙니다.	不是爭奪時間	
+1224	plrCountry	该玩家已叛国	해당 유저는 다른 세력에 가입하였습니다.	該玩家已叛國	
+1225	boostNoExitCamp	你已成为援军，不能叛国	원군은 소속 세력에서 탈퇴할 수 없습니다.	你已成爲援軍，不能叛國	
+1300	equipTypeError	你已装备相同类型将魂，无法重复装备	你已装备相同类型将魂，无法重复装备	你已裝備相同類型將魂，無法重複裝備	
+1350	plusdaytoomuch	月卡剩余天数过多	月卡剩余天数过多	月卡剩余天數過多	
+1400	nobugfreDay	只能购买当天的特价商品	只能购买当天的特价商品	只能購買當天的特價商品	
+1401	ACTOverdue	活动已过期	活动已过期	活動已過期	
+1403	noDZ	你没有点赞，不能领取礼包	你没有点赞，不能领取礼包	你沒有點贊，不能領取禮包	
+1404	rewardover	该礼包已经领取	该礼包已经领取	該禮包已經領取	
+1405	DZOK	你已经点过赞了	你已经点过赞了	你已經點過贊了	

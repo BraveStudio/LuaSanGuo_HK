@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>commonUI/res/tyj/SelectHeroUI/xj.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,350},{84,42}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{86,44}</string>
+			</dict>
+			<key>commonUI/res/tyj/SelectHeroUI/xq.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{26,137},{60,31}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{60,31}</string>
+			</dict>
+			<key>commonUI/res/tyj/SelectHeroUI/xuanze.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{44,1},{60,31}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{60,31}</string>
+			</dict>
+			<key>commonUI/res/tyj/SelectHeroUI/selectText.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,1},{41,134}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{41,134}</string>
+			</dict>
+			<key>commonUI/res/tyj/SelectHeroUI/myzk.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,137},{211,23}}</string>
+				<key>offset</key>
+				<string>{-1,1}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{214,27}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>SelectHeroUI_Text.png</string>
+			<key>realTextureFileName</key>
+			<string>SelectHeroUI_Text.png</string>
+			<key>size</key>
+			<string>{76,435}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>76</integer>
+			<key>height</key>
+			<integer>435</integer>
+		</dict>
+	</dict>
+</plist>

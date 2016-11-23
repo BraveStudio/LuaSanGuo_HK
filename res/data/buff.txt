@@ -1,0 +1,12 @@
+ID	效果描述	路径	空行
+1	加攻	cs/loadRes/buffName/jiagong.png	
+2	降攻	cs/loadRes/buffName/jianggong.png	
+3	凍結	cs/loadRes/buffName/dongjie.png	
+4	降謀	cs/loadRes/buffName/jiangmou.png	
+5	減防	cs/loadRes/buffName/jianfang.png	
+6	減攻	cs/loadRes/buffName/jianggong.png	
+7	加防	cs/loadRes/buffName/jiafang.png	
+8	免傷	cs/loadRes/buffName/jiafang.png	
+9	降法	cs/loadRes/buffName/jiangmou.png	
+10	降防	cs/loadRes/buffName/jianfang.png	
+11	加法	cs/loadRes/buffName/jiamou.png	

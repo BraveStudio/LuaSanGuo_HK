@@ -1,0 +1,7 @@
+ID	名称	显示名称	阵型资源	图片资源	效果类型	效果值	描述	克敌阵型	空行
+1	changshezhen	長蛇陣	ArmyFormation/changshezhen.tmx	changshezhen.png	1	0.15	全軍生命值增加15%	3	
+2	gouxingzhen	鉤形陣	ArmyFormation/gouxingzhen.tmx	gouxingzhen.png	2	0.15	全軍的攻擊力提升15%	5	
+3	heyizhen	鶴翼陣	ArmyFormation/heyizhen.tmx	heyizhen.png	6	0.05	全軍的全屬性提升5%	4	
+4	yanxingzhen	雁形陣	ArmyFormation/yanxingzhen.tmx	yanxingzhen.png	3	0.15	全軍的法術強度加15%	6	
+5	yuanxingzhen	圓形陣	ArmyFormation/yuanxingzhen.tmx	yuanxingzhen.png	4	0.2	全軍法術防禦增加20%	1	
+6	zhuixingzhen	錐形陣	ArmyFormation/zhuixingzhen.tmx	zhuixingzhen.png	6	0.05	全軍的全屬性提升5%	2	

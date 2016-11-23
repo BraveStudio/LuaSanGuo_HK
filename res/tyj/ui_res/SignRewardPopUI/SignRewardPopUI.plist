@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>tyj/ui_res/SignRewardPopUI/loging_done.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{211,854},{87,88}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{87,88}</string>
+			</dict>
+			<key>tyj/ui_res/SignRewardPopUI/loging_mask1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,431},{177,419}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{177,419}</string>
+			</dict>
+			<key>tyj/ui_res/SignRewardPopUI/longin_thickness.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{182,425}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{182,425}</string>
+			</dict>
+			<key>tyj/ui_res/SignRewardPopUI/property_gold.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{302,854},{92,78}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{110,110}</string>
+			</dict>
+			<key>tyj/ui_res/SignRewardPopUI/property_money.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{116,854},{91,93}}</string>
+				<key>offset</key>
+				<string>{0,1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{110,110}</string>
+			</dict>
+			<key>tyj/ui_res/SignRewardPopUI/task_new_bg2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,968},{31,29}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{31,29}</string>
+			</dict>
+			<key>tyj/ui_res/SignRewardPopUI/flag.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{183,431},{177,419}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{177,419}</string>
+			</dict>
+			<key>tyj/ui_res/SignRewardPopUI/daoju_bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,854},{110,110}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{110,110}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>SignRewardPopUI.png</string>
+			<key>realTextureFileName</key>
+			<string>SignRewardPopUI.png</string>
+			<key>size</key>
+			<string>{396,999}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>396</integer>
+			<key>height</key>
+			<integer>999</integer>
+		</dict>
+	</dict>
+</plist>

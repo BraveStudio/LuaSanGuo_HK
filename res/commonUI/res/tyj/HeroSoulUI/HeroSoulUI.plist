@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>commonUI/res/tyj/HeroSoulUI/dqjh.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,767},{373,52}}</string>
+				<key>offset</key>
+				<string>{-1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{374,52}</string>
+			</dict>
+			<key>commonUI/res/tyj/HeroSoulUI/jh.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{767,52}}</string>
+				<key>offset</key>
+				<string>{-3,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{772,52}</string>
+			</dict>
+			<key>commonUI/res/tyj/HeroSoulUI/jhxq.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{392,0},{513,52}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{513,52}</string>
+			</dict>
+			<key>commonUI/res/tyj/HeroSoulUI/jianghun.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{296,871},{84,42}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{84,42}</string>
+			</dict>
+			<key>commonUI/res/tyj/HeroSoulUI/tianjiajianghun.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{263,871},{128,33}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{128,34}</string>
+			</dict>
+			<key>commonUI/res/tyj/HeroSoulUI/xzjh.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,819},{373,52}}</string>
+				<key>offset</key>
+				<string>{-1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{374,52}</string>
+			</dict>
+			<key>commonUI/res/tyj/HeroSoulUI/zidongtianjia.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,871},{263,24}}</string>
+				<key>offset</key>
+				<string>{-1,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{264,24}</string>
+			</dict>
+			<key>commonUI/res/tyj/HeroSoulUI/zidongtianjiabt.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{296,955},{96,27}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{96,27}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>HeroSoulUI.png</string>
+			<key>realTextureFileName</key>
+			<string>HeroSoulUI.png</string>
+			<key>size</key>
+			<string>{444,999}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>444</integer>
+			<key>height</key>
+			<integer>999</integer>
+		</dict>
+	</dict>
+</plist>

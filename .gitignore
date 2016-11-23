@@ -1,0 +1,10 @@
+runtime
+config.json
+.*
+svn
+!.gitignore
+*.zip
+simulator
+frameworks
+*.sublime-project
+*.sublime-workspace

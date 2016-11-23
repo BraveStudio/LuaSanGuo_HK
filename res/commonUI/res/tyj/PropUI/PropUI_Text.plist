@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>commonUI/res/tyj/PropUI/daojida.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,1},{84,42}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{85,46}</string>
+			</dict>
+			<key>commonUI/res/tyj/PropUI/daoju.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{305,1},{26,50}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{26,50}</string>
+			</dict>
+			<key>commonUI/res/tyj/PropUI/daoju_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{200,1},{27,50}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{27,50}</string>
+			</dict>
+			<key>commonUI/res/tyj/PropUI/gongj.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{357,1},{26,50}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{26,50}</string>
+			</dict>
+			<key>commonUI/res/tyj/PropUI/gongj_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{409,1},{26,50}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{27,50}</string>
+			</dict>
+			<key>commonUI/res/tyj/PropUI/shiy.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{87,1},{58,29}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{58,29}</string>
+			</dict>
+			<key>commonUI/res/tyj/PropUI/jiangh.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{252,1},{26,51}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{26,51}</string>
+			</dict>
+			<key>commonUI/res/tyj/PropUI/jiangh_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{147,1},{27,51}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{27,51}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>PropUI_Text.png</string>
+			<key>realTextureFileName</key>
+			<string>PropUI_Text.png</string>
+			<key>size</key>
+			<string>{460,44}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>460</integer>
+			<key>height</key>
+			<integer>44</integer>
+		</dict>
+	</dict>
+</plist>

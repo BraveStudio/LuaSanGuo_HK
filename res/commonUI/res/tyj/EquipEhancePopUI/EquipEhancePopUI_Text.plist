@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/hc.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{491,26},{58,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{58,32}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/hc_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{379,27},{58,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{58,32}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/qh.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{439,27},{58,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{58,32}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/qh_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{261,33},{58,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{58,32}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/qianghua.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{355,61},{59,30}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{59,30}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/shuxing.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,1},{258,138}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{258,138}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/suoxucailiao.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{491,1},{96,23}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{96,23}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/suoxuzhuangbei.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{589,1},{96,23}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{96,23}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/xilian.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{687,1},{60,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{60,32}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/xilianxiaohao.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{379,1},{110,24}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{110,24}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/xl.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{321,33},{58,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{58,32}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/xl_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{261,67},{58,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{58,32}</string>
+			</dict>
+			<key>commonUI/res/tyj/EquipEhancePopUI/zcyc.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{261,1},{116,30}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{116,30}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>EquipEhancePopUI_Text.png</string>
+			<key>realTextureFileName</key>
+			<string>EquipEhancePopUI_Text.png</string>
+			<key>size</key>
+			<string>{748,140}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>748</integer>
+			<key>height</key>
+			<integer>140</integer>
+		</dict>
+	</dict>
+</plist>
