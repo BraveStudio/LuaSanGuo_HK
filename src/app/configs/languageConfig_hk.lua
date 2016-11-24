@@ -1,6 +1,7 @@
 local languageConfig_ch = 
 {
 ["language_novice_104"]="重整陣容",
+["language_Enlist_13"] = "將令不足，您可以從禮包和副本寶箱中獲得",
 ["language_Compound_1"]="關卡ID",
 ["language_tianTi_5"]="驃騎將軍",
 ["language_chengjiu_16"]="擁有%d件紅色裝備",

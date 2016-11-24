@@ -846,13 +846,28 @@ function MainViewController:initUiDisplay_()
     	self._scdlbBt_t:setVisible(true)
     end
 
+    local mmm = TimerManager:getCurrentSecond()
+     
+    local ppp = PlayerData.eventAttr.jrth_st
+    local ooo = PlayerData.eventAttr.xffl_st
+    local iii = PlayerData.eventAttr.zhzb_st
+    local uuu = PlayerData.eventAttr.jrth_et
+    local yyy = PlayerData.eventAttr.xffl_et
+    local ttt = PlayerData.eventAttr.zhzb_et
     --隐藏节日狂欢
-    if (TimerManager:getCurrentSecond() > PlayerData.eventAttr.jrth_st or TimerManager:getCurrentSecond() > PlayerData.eventAttr.xffl_st or TimerManager:getCurrentSecond() > PlayerData.eventAttr.zhzb_st)
-        and (TimerManager:getCurrentSecond() < PlayerData.eventAttr.jrth_et or TimerManager:getCurrentSecond() < PlayerData.eventAttr.xffl_et or TimerManager:getCurrentSecond() < PlayerData.eventAttr.zhzb_et) then
+    if ((TimerManager:getCurrentSecond() > PlayerData.eventAttr.jrth_st) and (TimerManager:getCurrentSecond() < PlayerData.eventAttr.jrth_et)) 
+        or ((TimerManager:getCurrentSecond() > PlayerData.eventAttr.xffl_st) and (TimerManager:getCurrentSecond() < PlayerData.eventAttr.xffl_et))
+        or ((TimerManager:getCurrentSecond() > PlayerData.eventAttr.zhzb_st) and (TimerManager:getCurrentSecond() < PlayerData.eventAttr.zhzb_et)) then
     	self._jrkhBt_t:setVisible(true)
     else
-    	self._jrkhBt_t:setVisible(false)
+        self._jrkhBt_t:setVisible(false)
     end
+--    if (TimerManager:getCurrentSecond() > PlayerData.eventAttr.jrth_st or TimerManager:getCurrentSecond() > PlayerData.eventAttr.xffl_st or TimerManager:getCurrentSecond() > PlayerData.eventAttr.zhzb_st)
+--        and (TimerManager:getCurrentSecond() < PlayerData.eventAttr.jrth_et or TimerManager:getCurrentSecond() < PlayerData.eventAttr.xffl_et or TimerManager:getCurrentSecond() < PlayerData.eventAttr.zhzb_et) then
+--    	self._jrkhBt_t:setVisible(true)
+--    else
+--    	self._jrkhBt_t:setVisible(false)
+--    end
 
     --隐藏七日狂欢
     if PlayerData.eventAttr.et < TimerManager:getCurrentSecond() then
