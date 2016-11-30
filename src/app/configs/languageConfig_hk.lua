@@ -1,5 +1,15 @@
 local languageConfig_ch = 
 {
+--选秀系统
+["language_selectGirl_1"] = "活動時間：",
+["language_selectGirl_2"] = "活動倒計時：",
+["language_selectGirl_3"] = "本期秀女",
+["language_selectGirl_4"] = "秀女選票排行榜",
+["language_selectGirl_5"] = "當前為第%s輪，本輪選秀需要：",
+["language_selectGirl_6"] = "該批秀女投票次數已滿，換一批試試",
+["language_selectGirl_7"] = "活動已結束",
+["language_selectGirl_8"] = "使用经验丹成功!增加%s主公经验！",
+["language_selectGirl_9"] = "是否花費%s元寶重置秀女",
 ["language_novice_104"]="重整陣容",
 ["language_Enlist_13"] = "將令不足，您可以從禮包和副本寶箱中獲得",
 ["language_Compound_1"]="關卡ID",

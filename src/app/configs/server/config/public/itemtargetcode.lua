@@ -293,4 +293,11 @@ g_evtCode =
 	getMonthReward = 77,    --获取月卡奖励
 	todayprice = 78,		--今日特价
 	everyConsume = 79,		--每日累计消费
+	ACCH_JRTH = 80,         --今日特惠
+	ACCH_XFFL = 81,			--消费返利
+	zhzbOver = 82,			--诸侯争霸结算
+	mobai = 83,             --膜拜
+	xm = 84,				--选美
+	resertxm = 85,          --刷新选美
+	useitem  = 86,          --使用物品
 }

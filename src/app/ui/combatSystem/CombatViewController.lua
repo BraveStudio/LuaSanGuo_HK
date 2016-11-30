@@ -1014,7 +1014,7 @@ function CombatViewController:quitCombat()
     end
 
     if self.combatInfo.combatType == CombatCenter.CombatType.RB_PVE and self.combatResult == CombatCenter.FightResult.WIN
-     and self.isFirstFight and self.combatInfo.littleLevels%10 == 0 then
+     and self.isFirstFight and self.combatInfo.littleLevels%10 == 0 and self.combatInfo.majorHurdles < 23 then
         GameCtlManager:push("app.ui.imagePlayerSystem.ImagePlayerViewController",{ data = { jumpData = { levelId = ConfigHandler:getChapterOfID(self.combatInfo.majorHurdles), callBack = quitFunc_ } }})
     else
         quitFunc_()

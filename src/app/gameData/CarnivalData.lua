@@ -54,8 +54,12 @@ NetWork:addNetWorkListener({ 2, 33 }, onAllBZ)
 
 --英雄之旅标志
 local onLvCheng = function(event)
-    CarnivalData.lvChengBZ = true
-    CarnivalData:updateBz()
+    for i, v in pairs(event.tb) do
+        if CarnivalData.lvCheng[v].day <= PlayerData.eventAttr.day then
+            CarnivalData.lvChengBZ = true
+            CarnivalData:updateBz()
+        end
+    end
 end
 NetWork:addNetWorkListener({ 33, 3 }, onLvCheng)
 
@@ -133,7 +137,7 @@ function CarnivalData:sendGetLvCheng(idx, listener)
     end
     NetWork:addNetWorkListener({33,2}, Functions.createNetworkListener(onServerRequest,true,"ret"))
     local msg = {idx = {33, 2},index = idx}
-    NetWork:sendToServer(msg)
+    NetWork:sendToServer(msg)    
 end
 
 

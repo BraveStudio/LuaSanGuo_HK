@@ -44,7 +44,7 @@ G_IsLinkLoaclIp = false
 
 
 --外网服务器id
-G_ServerId = 1
+G_ServerId = 4
 
 --是否自动获取当前链接的服务器和更新地址
 -- 审查服务器信息：http://115.29.163.19:8110/sanguoGM/main.html
@@ -62,7 +62,7 @@ G_DeviceType = 1
 G_PlatformType = 6
 
 --当前语言
-G_CurrentLanguage = "ch"
+G_CurrentLanguage = "hk"
 
 --时候开启新手引导
 G_IsOpenGuide = false

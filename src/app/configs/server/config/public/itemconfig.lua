@@ -56,6 +56,8 @@ g_qhBoxConfig4 = {}				--器魂宝箱4
 g_qhBoxConfig5 = {}				--器魂宝箱5
 g_cjspBoxconfig = {}            --超时碎片宝箱
 g_dwBoxconfig = {}				--帝王宝箱
+g_redBag = {}               --红色锻造包
+g_OrangeBag = {}            --橙色锻造包
 
 --商店
 g_ShopConfig = {}				--商店
@@ -1159,6 +1161,40 @@ local ReadDWBoxConfig = function()
 		end)
 	-- AddLog("Load RedBox Count: " .. tostring(count))
 end
+--红色锻造包
+local ReadRedBagConfig = function()
+	local title = {
+		{'id', tonumber},					-- 道具id
+		{'goodtype', tonumber},				-- 类型
+		{'num', tonumber},					-- 数量
+		{4,tonumber},						-- 概率
+	}
+
+	local count = 0
+	LoadConfig('data/cailiaobox1.txt', title,
+		function (row)
+			count = count + 1
+			g_redBag[count] = row
+		end)
+	-- AddLog("Load RedBox Count: " .. tostring(count))
+end
+--橙色锻造包
+local ReadOrangeBagConfig = function()
+	local title = {
+		{'id', tonumber},					-- 道具id
+		{'goodtype', tonumber},				-- 类型
+		{'num', tonumber},					-- 数量
+		{4,tonumber},						-- 概率
+	}
+
+	local count = 0
+	LoadConfig('data/cailiaobox2.txt', title,
+		function (row)
+			count = count + 1
+			g_OrangeBag[count] = row
+		end)
+	-- AddLog("Load RedBox Count: " .. tostring(count))
+end
 --普通商店配置
 local ReadShopConfig = function()
 	local title = {
@@ -2030,7 +2066,8 @@ ReadHQBoxConfig3()
 ReadHQBoxConfig4()
 ReadHQBoxConfig5()
 ReadDWBoxConfig()
-
+ReadRedBagConfig()
+ReadOrangeBagConfig()
 
 ReadShopConfig()
 ReadShopVip1Config()

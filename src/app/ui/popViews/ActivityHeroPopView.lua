@@ -200,7 +200,7 @@ function ActivityHeroPopView:initDisplay()
 	--活动时间
 	self._date_t:setString(tostring(ActivityData.xsHero.startTime.year) .. "." ..
 						   tostring(ActivityData.xsHero.startTime.month) .. "." ..
-						   tostring(ActivityData.xsHero.startTime.day) .. "~" ..
+						   tostring(ActivityData.xsHero.startTime.day) .. "至" ..
 						   tostring(ActivityData.xsHero.endTime.year) .. "." ..
 						   tostring(ActivityData.xsHero.endTime.month) .. "." ..
 						   tostring(ActivityData.xsHero.endTime.day)

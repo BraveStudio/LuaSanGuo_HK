@@ -689,7 +689,10 @@ CountryFightUI_Text = {
 	plistPath = "commonUI/res/cs/CountryFightPopUI/CountryFightUI_Text.plist",
 	imagePath = "commonUI/res/cs/CountryFightPopUI/CountryFightUI_Text.png" 	
 },
-
+SelectGirl = {
+	plistPath = "tyj/ui_res/SelectGirlUI/SelectGirl.plist",
+	imagePath = "tyj/ui_res/SelectGirlUI/SelectGirl.png" 
+}
 }
 
 return StudioResConfig
