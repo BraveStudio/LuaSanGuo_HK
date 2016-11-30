@@ -39,7 +39,7 @@ G_IsUseSDK = false
 G_SDKType = 6
 
 -- NetWork 是否连接内网，true: 连接内网，false: 连接外网
-G_IsLinkLoaclIp = true
+G_IsLinkLoaclIp = false
 
 
 
