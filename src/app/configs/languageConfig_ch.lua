@@ -813,7 +813,8 @@ local languageConfig_ch =
         language_equip_5 = "很遗憾，本次强化失败，再试一次吧！",
         language_equip_6 = "很遗憾，本次洗练失败，再试一次吧！",
         language_equip_7 = "很遗憾，本次合成失败，再试一次吧！",
-
+        --选秀系统
+        language_selectGirl_1 = "很遗憾，本次合成失败，再试一次吧！",
         --固定UI文字
 
         ui_activityHero_1 = "活动时间：",

@@ -57,15 +57,17 @@ function LevelUpPopView:onSurt_btClick()
     local controller = self._controller_t
     local tempCall = self.endCallBack
     self:close()
+    -- if self.isOpenGuide ~= nil and self.isOpenGuide  == false then
 
-    if PlayerData.eventAttr.m_guideStageId and g_guideConfig.guideStage[PlayerData.eventAttr.m_guideStageId] and PlayerData.eventAttr.m_guideStageId ~= 1 then
-        GameCtlManager:goTo("app.ui.mainSystem.MainViewController")
-    else
-        if tempCall then
-            tempCall()
+    -- else
+        if PlayerData.eventAttr.m_guideStageId and g_guideConfig.guideStage[PlayerData.eventAttr.m_guideStageId] and PlayerData.eventAttr.m_guideStageId ~= 1 then
+            GameCtlManager:goTo("app.ui.mainSystem.MainViewController")
+        else
+            if tempCall then
+                tempCall()
+            end
         end
-    end
-    
+    -- end
 end
 --@auto code Surt_bt btFunc end
 
@@ -83,7 +85,7 @@ function LevelUpPopView:onDisplayView(data)
     
     --初始化npc
     Functions.loadImageWithSprite(self._uplevel_pnc_t, "npc/NPC_zf_uplevel.png")
-
+    self.isOpenGuide = data.isOpenGuide
     self.endCallBack = data.callBack
 	Functions.initLabelOfString(self._level_text_t, data.oldLevel,self._upLevelText_t, data.newLevel)
     Functions.callAnySdkFuc(function( )
@@ -122,13 +124,16 @@ function LevelUpPopView:onDisplayView(data)
 
     local onReturnMain = function()
     end
+    -- if self.isOpenGuide ~= nil and self.isOpenGuide  == false then
 
-    if PlayerData.eventAttr.m_guideStageId and g_guideConfig.guideStage[PlayerData.eventAttr.m_guideStageId]
-     and PlayerData.eventAttr.m_guideStageId ~= 1 then
-        scheduler.performWithDelayGlobal(function()
-                            PromptManager:openNewGuide(self._surt_bt_t, g_uplevelConfig[PlayerData.eventAttr.m_level], onReturnMain, true)
-                         end, 1.5)
-    end
+    -- else
+        if PlayerData.eventAttr.m_guideStageId and g_guideConfig.guideStage[PlayerData.eventAttr.m_guideStageId]
+         and PlayerData.eventAttr.m_guideStageId ~= 1 then
+            scheduler.performWithDelayGlobal(function()
+                                PromptManager:openNewGuide(self._surt_bt_t, g_uplevelConfig[PlayerData.eventAttr.m_level], onReturnMain, true)
+                             end, 1.5)
+        end
+    -- end
                     
 end
 

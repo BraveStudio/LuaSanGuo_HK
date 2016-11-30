@@ -97,6 +97,33 @@ function PropData:RequestUsePower(id,handler)
     local msg = {idx = {5, 8}, id = id}
     NetWork:sendToServer(msg)
 end
+--发送使用主公经验丹请求
+function PropData:RequestUseExpWater(id,_handler)
+    
+    
+    -- --监听服务器数据
+    local onServerRequest = function (event)
+        PropData:miuProp( {m_id = id,m_count = 1})
+        local addLevel = event.data.addlevel
+        local addExp = event.data.addExp
+        local upLevelAward = event.data.upLevelAward
+        local oldLevel =  PlayerData.eventAttr.m_level 
+        PlayerData.eventAttr.m_level  = PlayerData.eventAttr.m_level + addLevel
+        if addLevel > 0 then 
+            GameCtlManager:getCurrentController():openChildView("app.ui.popViews.LevelUpPopView", { isRemove = false, data = { oldLevel = oldLevel,
+                 newLevel = PlayerData.eventAttr.m_level, upLevelAward = upLevelAward,isOpenGuide = false}})
+        else
+             PromptManager:openTipPrompt(string.format( "使用经验丹成功!增加%s主公经验！",addExp))
+        end
+        if _handler then
+            _handler()
+        end
+    end
+    NetWork:addNetWorkListener({5,10}, Functions.createNetworkListener(onServerRequest,true,"ret"))
+    local msg = {idx = {5, 10}, id = id}
+    NetWork:sendToServer(msg)
+end
+
 --发送使用改名卡请求
 function PropData:RequestModifyName(name,id,handler)
     --监听服务器数据

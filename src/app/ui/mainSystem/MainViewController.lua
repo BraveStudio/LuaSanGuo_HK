@@ -191,6 +191,12 @@ function MainViewController:onDidLoadView()
 	self._SignRewardBt_t = self.view_t.csbNode:getChildByName("main"):getChildByName("SignRewardBt")
 	self._SignRewardBt_t:onTouch(Functions.createClickListener(handler(self, self.onSignrewardbtClick), "zoom"))
 
+	self._xuanxBt_t = self.view_t.csbNode:getChildByName("main"):getChildByName("xuanxBt")
+	self._xuanxBt_t:onTouch(Functions.createClickListener(handler(self, self.onXuanxbtClick), "zoom"))
+
+	self._jrkhBt_t = self.view_t.csbNode:getChildByName("main"):getChildByName("jrkhBt")
+	self._jrkhBt_t:onTouch(Functions.createClickListener(handler(self, self.onJrkhbtClick), "zoom"))
+
 	self._vipBt_t = self.view_t.csbNode:getChildByName("main"):getChildByName("vipBt")
 	self._vipBt_t:onTouch(Functions.createClickListener(handler(self, self.onVipbtClick), "zoom"))
 
@@ -208,9 +214,6 @@ function MainViewController:onDidLoadView()
 
 	self._sevenAwardBt_t = self.view_t.csbNode:getChildByName("main"):getChildByName("sevenAwardBt")
 	self._sevenAwardBt_t:onTouch(Functions.createClickListener(handler(self, self.onSevenawardbtClick), "zoom"))
-
-	self._jrkhBt_t = self.view_t.csbNode:getChildByName("main"):getChildByName("jrkhBt")
-	self._jrkhBt_t:onTouch(Functions.createClickListener(handler(self, self.onJrkhbtClick), "zoom"))
 
 end
 --@auto code uiInit end
@@ -583,6 +586,13 @@ function MainViewController:onJrkhbtClick()
 end
 --@auto code Jrkhbt btFunc end
 
+--@auto code Xuanxbt btFunc
+function MainViewController:onXuanxbtClick()
+    Functions.printInfo(self.debug,"Xuanxbt button is click!")
+    self:openChildView("app.ui.popViews.SelectGirlPopView")
+end
+--@auto code Xuanxbt btFunc end
+
 --@auto button backcall end
 
 
@@ -862,18 +872,15 @@ function MainViewController:initUiDisplay_()
     else
         self._jrkhBt_t:setVisible(false)
     end
---    if (TimerManager:getCurrentSecond() > PlayerData.eventAttr.jrth_st or TimerManager:getCurrentSecond() > PlayerData.eventAttr.xffl_st or TimerManager:getCurrentSecond() > PlayerData.eventAttr.zhzb_st)
---        and (TimerManager:getCurrentSecond() < PlayerData.eventAttr.jrth_et or TimerManager:getCurrentSecond() < PlayerData.eventAttr.xffl_et or TimerManager:getCurrentSecond() < PlayerData.eventAttr.zhzb_et) then
---    	self._jrkhBt_t:setVisible(true)
---    else
---    	self._jrkhBt_t:setVisible(false)
---    end
 
     --隐藏七日狂欢
     if PlayerData.eventAttr.et < TimerManager:getCurrentSecond() then
     	self._sevenAwardBt_t:setVisible(false)
     end
 
+    --隐藏选秀活动
+    Functions.setEnabledBt(self._xuanxBt_t, ActivityData.eventAttr.sg_sys_isOpenSelectGirl)
+    
     --充值活动
     local onCzbxChange = function(event)
     	if event.data == 0 then

@@ -33,6 +33,26 @@ ActivityData.xsHero.CD = 0 --免费抽卡的cd时间
 ActivityData.xsHero.isEnableHero = {}
 ActivityData.xsHero.showHero = {}
 
+--选秀数据
+ActivityData.eventAttr.sg_activityTimeout = 0 --剩余活动时间
+ActivityData.eventAttr.sg_curLevel = 1--当前轮数
+ActivityData.eventAttr.sg_curNeedGold = 200 --当前需要元宝
+ActivityData.eventAttr.sg_isOpneSelectGirl = false --是否开启选秀活动
+ActivityData.eventAttr.sg_sys_isOpenSelectGirl = true --是否显示选秀入口
+
+ActivityData.selectGirl ={}
+ActivityData.selectGirl.sg_activityTimeout = 0 --剩余活动时间
+ActivityData.selectGirl.sg_activityStartTime = {year = 2016,month =12,day = 1} --活动开始时间
+ActivityData.selectGirl.sg_activityEndTime = {year = 2016,month =12,day = 31}--活动结束时间
+ActivityData.selectGirl.sg_inf = "一起来选你心中的女神吧"--活动描述
+ActivityData.selectGirl.sg_curLevel = 1--当前轮数
+ActivityData.selectGirl.sg_curNeedGold = 0 --当前需要元宝
+ActivityData.selectGirl.sg_girlIds = {1,2,5,4} --美女展示id
+ActivityData.selectGirl.sg_resetGold =100 --当前重置需要的元宝
+ActivityData.selectGirl.sg_isOpneSelectGirl = false --是否开启选秀活动
+ActivityData.selectGirl.sg_sys_isOpenSelectGirl = true --是否显示选秀入口
+
+
 --在线领奖
 ActivityData.eventAttr.m_onlineIndex = 0
 ActivityData.eventAttr.remainTime = 0
@@ -130,7 +150,7 @@ function ActivityData:init()
             ActivityData.eventAttr.activityHeroTime = ActivityData.xsHero.endTime_s - TimerManager:getCurrentSecond()
             local listener = function( )               
                 if ActivityData.eventAttr.cdTime > 0 then
-                    ActivityData.eventAttr.freeHeroRemainTime = ActivityData.xsHero.CD - (TimerManager:getCurrentSecond() - ActivityData.eventAttr.cdTime)
+                    ActivityData.eventAttr.freeHeroRemainTime = math.floor(ActivityData.xsHero.CD - (TimerManager:getCurrentSecond() - ActivityData.eventAttr.cdTime))
                     if ActivityData.eventAttr.freeHeroRemainTime > 0 then
                         ActivityData.eventAttr.freeHeroRemainTime = ActivityData.eventAttr.freeHeroRemainTime - 1
                         ActivityData.eventAttr.freeTakeHeroFlag = 0
@@ -149,6 +169,7 @@ function ActivityData:init()
                     ActivityData.eventAttr.freeTakeHeroFlag = 0
                     ActivityData.eventAttr.isEnableActivityHero = 0
                 end
+                
             end
             GameEventCenter:addEventListener(TimerManager.SECOND_CHANGE_EVENT, listener)
         else
@@ -181,7 +202,35 @@ function ActivityData:init()
         GameEventCenter:addEventListener(TimerManager.SECOND_CHANGE_EVENT, listener)
     end
     NetWork:addNetWorkListener({ 2, 23 }, onActivityInit2)
-    
+    --选美数据同步
+    local onSelectGirlInit = function(event)
+        local data = event.data
+        for k, v in pairs(data) do
+            self.selectGirl[k] = v
+        end  
+        self.eventAttr.sg_activityTimeout = self.selectGirl.sg_activityTimeout
+        self.eventAttr.sg_curLevel = self.selectGirl.sg_curLevel
+        self.eventAttr.sg_curNeedGold = self.selectGirl.sg_curNeedGold
+        self.eventAttr.sg_isOpneSelectGirl = self.selectGirl.sg_isOpneSelectGirl 
+        local listener = function( )
+            if self.eventAttr.sg_activityTimeout >= 1 then
+                self.eventAttr.sg_activityTimeout = self.eventAttr.sg_activityTimeout - 1    
+            else
+                self.eventAttr.sg_activityTimeout = 0  
+                self.eventAttr.sg_isOpneSelectGirl = false  
+            end
+        end
+        GameEventCenter:addEventListener(TimerManager.SECOND_CHANGE_EVENT, listener)
+    end
+    NetWork:addNetWorkListener({ 36, 1 }, onSelectGirlInit)
+
+
+
+    NetWork:addNetWorkListener({ 36, 5 }, function(event)
+        ActivityData.selectGirl.sg_girlIds = event.sg_girlIds
+        ActivityData.selectGirl.sg_isOpneSelectGirl = false
+    end)
+
     local onBZ = function(event)
     
         --每日充值
@@ -487,7 +536,103 @@ end
 function ActivityData:getDianZan()
     return ActivityData.DianZan
 end
+--发送获取选美排行接口
+function ActivityData:requestSelectGirlRank(girlMark,_handler)
+    local onServerRequest = function(event)
+        local allVoteNum = event.data.num
+        local rankData = {}
+        for k,v in pairs(event.data.playerinfo) do
+            local tempData = {}
+            tempData.playerName = v.name
+            tempData.voteNum = v.count
+            tempData.percent = math.floor(v.count/allVoteNum*100)
+            rankData[#rankData+1] = tempData
+        end
+        if #rankData >1 then 
+            table.sort(rankData,function(a,b) 
+            return a.voteNum > b.voteNum end)
+        end
+        if _handler then 
+            _handler(rankData)
+        end
+    end
+    NetWork:addNetWorkListener({36,4}, Functions.createNetworkListener(onServerRequest,true,"ret"))
+    local msg = {idx = {36, 4},index = girlMark}
+    NetWork:sendToServer(msg)
+end
+--发送选美领奖接口
+function ActivityData:RequestSelectGirl(girlMark,handler)
+--    event={}
+--    event.gtype = 4
+--    event.gcount = 1
+--    event.gid = 42
+    local onServerRequest = function(event)
+        self.eventAttr.sg_curLevel = event.data.sg_curLevel
+        self.eventAttr.sg_curNeedGold = event.data.sg_curNeedGold        
+        PlayerData.eventAttr.m_gold  = event.data.curgold
+        local gtype = event.data.goods[1][2]
+        local goodNum = event.data.goods[1][3] * event.data.rate
+        local goodId = event.data.goods[1][1]
+        local goodMark = event.data.goods[1][4]
+        if gtype == 1 then    --抽卡                  
+            HeroCardData:addCard({slot = goodMark,id = goodId}) 
+            GameCtlManager:getCurrentController():openChildView("app.ui.popViews.EnlistThreePopView", {isRemove = true,data = {slot = goodMark,id = goodId,type = 2} })   
+        elseif gtype == 2 then--抽装备/将魂
+            EquipmentData:addEquip({m_id = goodId,mark = goodMark,rdAttrType = event.gPlusPropType,rdAttrPercent = event.gPropValueTil })
+                NoticeManager:openRewardTips(GameCtlManager:getCurrentController(), {type = NoticeManager.REWARD_EQUIP_TIPS,data = {equipMark = goodMark}})
+        elseif gtype == 10 then--抽装备/将魂
+            HeroSoulData:addheroSoul({id = goodId,mark = goodMark,
+                level = 1,
+                atkFormFlag = 0,
+                exp = 0})
+                NoticeManager:openRewardTips(GameCtlManager:getCurrentController(), {type = NoticeManager.REWARD_HERO_SOUL_TIPS,data = {heroSoulMark = goodMark}})
+        elseif gtype == 3 then --开武将卡包
+            for k,v in pairs(goodMark) do
+                HeroCardData:addCard({slot = v.slot,id = v.id})
+            end
+            NoticeManager:openRewardTips(GameCtlManager:getCurrentController(), {type = NoticeManager.REWARD_HERO_CARD_TIPS,data = {heroId = goodId, heroNum = #goodMark }}) 
+        elseif gtype == 4 then --抽道具
+            PropData:addProp({m_id=goodId,m_count=goodNum})
+            local propImg = ""
+            if  goodId == -2 then
+                propImg = "property_gold.png"
+            elseif  goodId == -3 then
+                propImg = "property_money.png"
+            elseif goodId == -5 then
+                propImg = "soul80.png"
+            elseif goodId == -6 then
+                propImg = "property_soulCrystal.png"
+            else
+                propImg = ConfigHandler:getPropImageOfId(goodId)
+            end
+            NoticeManager:openRewardTips(GameCtlManager:getCurrentController(), {type = NoticeManager.REWARD_PROP_TIPS,data = {{img = propImg, num = goodNum}}})
+        elseif gtype == 5 then --抽碎片
+            local img = ConfigHandler:getHeroHeadImageOfId(goodId)                   
+            Functions:addItemResources({id = goodId,type = event.gtype,count = num,slot = goodMark})   
+            NoticeManager:openRewardTips(GameCtlManager:getCurrentController(), {type = NoticeManager.REWARD_CARD_FRAGMENT_TIPS,data = {{img = img, num = goodNum}}}) 
+        end
+    end
 
+    NetWork:addNetWorkListener({36,2}, Functions.createNetworkListener(onServerRequest,true,"ret"))
+    local msg = {idx = {36, 2},index = girlMark}
+    NetWork:sendToServer(msg)
+end
+--发送重置接口
+function ActivityData:requestResetSelectGirl(_handler)
+    local onServerRequest = function(event)
+        ActivityData.selectGirl.sg_girlIds = event.data.sg_girlIds
+        self.eventAttr.sg_curLevel = event.data.sg_curLevel
+        self.eventAttr.sg_curNeedGold = event.data.sg_curNeedGold        
+        PlayerData.eventAttr.m_gold  = event.data.curgold
+        self.selectGirl.sg_resetGold = event.data.sg_resetGold
+        if _handler then 
+            _handler()
+        end
+    end
+    NetWork:addNetWorkListener({36,3}, Functions.createNetworkListener(onServerRequest,true,"ret"))
+    local msg = {idx = {36, 3}}
+    NetWork:sendToServer(msg)
+end
 --发送抽抽卡请求
 function ActivityData:RequestTakeCard(type,xsHeroType,handler)
     --监听服务器数据
@@ -508,7 +653,7 @@ function ActivityData:RequestTakeCard(type,xsHeroType,handler)
         TimerManager:setCurrentSecond(event.currentTime)
         if type == 1 then 
             ActivityData.eventAttr.cdTime = event.initTime
-            ActivityData.eventAttr.freeHeroRemainTime = ActivityData.xsHero.CD - (TimerManager:getCurrentSecond() - ActivityData.eventAttr.cdTime)
+            ActivityData.eventAttr.freeHeroRemainTime = math.floor(ActivityData.xsHero.CD - (TimerManager:getCurrentSecond() - ActivityData.eventAttr.cdTime))
         end
 
         if handler ~= nil then

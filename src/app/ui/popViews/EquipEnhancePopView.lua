@@ -194,6 +194,7 @@ function EquipEnhancePopView:selectEhanceType(type)
                     	end}}) 
                     self.jumpData.mark = returnData.newEquip.slot
 				else
+					self.jumpData.handler()
 					PromptManager:openTipPrompt(LanguageConfig.language_equip_5)
 					enhanceSelectedMark = 0
 					if ConfigHandler:getColorNumOfId(equipData.m_id) >= 5 and  ConfigHandler:getStagOfId(equipData.m_id) >= 5 then

@@ -981,6 +981,8 @@ function PropViewController:displayPropInf(target,index,data)
                 PropData:RequestUsePower(data.m_id,handler)
             elseif propType == 7 then 
                  self:openChildView("app.ui.popViews.UseExpCardPopView", { isRemove = false, data = {data.m_id} })
+            elseif propType == 1 then --主公经验丹
+                PropData:RequestUseExpWater(data.m_id)
             elseif propType <= 0 then 
                 NoticeManager:openSellPropView(GameCtlManager.currentController_t, {propId = data.m_id  ,handler = function(sellPropNum)
                     self:sellProp(data.m_id,sellPropNum)
