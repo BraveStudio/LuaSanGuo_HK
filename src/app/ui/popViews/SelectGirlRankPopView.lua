@@ -22,7 +22,8 @@ function SelectGirlRankPopView:onInitUI()
     self._rankPanel_t = self.csbNode:getChildByName("Panel_140"):getChildByName("rankPanel")
 	
     --label list
-    
+    self._Text_9_t = self.csbNode:getChildByName("Panel_140"):getChildByName("Image_10"):getChildByName("Text_9")
+	self._Text_9_t:setString(LanguageConfig.language_selectGirl_4)
     --button list
     self._closeBt_t = self.csbNode:getChildByName("Panel_140"):getChildByName("closeBt")
 	self._closeBt_t:onTouch(Functions.createClickListener(handler(self, self.onClosebtClick), ""))

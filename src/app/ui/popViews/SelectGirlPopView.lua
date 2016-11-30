@@ -26,16 +26,21 @@ function SelectGirlPopView:onInitUI()
 	self._needGold_t = self.csbNode:getChildByName("Panel_140"):getChildByName("Image_15"):getChildByName("titleOnePanel"):getChildByName("needGold")
 	self._gold_t = self.csbNode:getChildByName("Panel_140"):getChildByName("Image_15"):getChildByName("titleOnePanel"):getChildByName("gold")
 	self._titleTwoPanel_t = self.csbNode:getChildByName("Panel_140"):getChildByName("Image_15"):getChildByName("titleTwoPanel")
-	self._title_t = self.csbNode:getChildByName("Panel_140"):getChildByName("Image_15"):getChildByName("titleTwoPanel"):getChildByName("title")
 	self._cardPanel_t = self.csbNode:getChildByName("Panel_140"):getChildByName("cardPanel")
 	self._rankPanel_t = self.csbNode:getChildByName("Panel_140"):getChildByName("rankPanel")
 	
     --label list
     self._Text_29_t = self.csbNode:getChildByName("Panel_140"):getChildByName("Text_29")
-	self._Text_29_t:setString(LanguageConfig.ui_activityHero_1)
+	self._Text_29_t:setString(LanguageConfig.language_selectGirl_1)
+
+	self._Text_29_0_t = self.csbNode:getChildByName("Panel_140"):getChildByName("Text_29_0")
+	self._Text_29_0_t:setString(LanguageConfig.language_selectGirl_2)
 
 	self._activityTime_t = self.csbNode:getChildByName("Panel_140"):getChildByName("activityTime")
 	self._activityTime_t:setString(LanguageConfig.ui_activityHero_1)
+
+	self._title_t = self.csbNode:getChildByName("Panel_140"):getChildByName("Image_15"):getChildByName("titleTwoPanel"):getChildByName("title")
+	self._title_t:setString(LanguageConfig.language_selectGirl_3)
     --button list
     self._closeBt_t = self.csbNode:getChildByName("Panel_140"):getChildByName("closeBt")
 	self._closeBt_t:onTouch(Functions.createClickListener(handler(self, self.onClosebtClick), ""))
@@ -51,7 +56,7 @@ end
 --@auto code Resetbt btFunc
 function SelectGirlPopView:onResetbtClick()
     Functions.printInfo(self.debug,"Resetbt button is click!")
-    local title = string.format("是否花费%s元宝重置选秀？",ActivityData.selectGirl.sg_resetGold)
+    local title = string.format(LanguageConfig.language_selectGirl_9,ActivityData.selectGirl.sg_resetGold)
     NoticeManager:openTips(GameCtlManager:getCurrentController(), {title = title,handler = function( )
     	ActivityData:requestResetSelectGirl(handler(self,self.updateGirlRes))
     end})
@@ -94,23 +99,23 @@ function SelectGirlPopView:initDisplay()
 	--活动描述
 	self._inf_t:setString(ActivityData.selectGirl.sg_inf)
 	--活动轮数
-	self._selectLevel_t:setString(string.format("當前為第%s輪，本輪選秀需要：",ActivityData.eventAttr.sg_curLevel))
+	self._selectLevel_t:setString(string.format(LanguageConfig.language_selectGirl_5,ActivityData.eventAttr.sg_curLevel))
 	if ActivityData.eventAttr.sg_curLevel > g_xmcfg.maxCount then 
-		self._selectLevel_t:setString("该批秀女投票投票次数已满，换一批试试")
+		self._selectLevel_t:setString(LanguageConfig.language_selectGirl_6)
 		self._needGold_t:setVisible(false)
 		self._gold_t:setVisible(false)
 	else
-		self._selectLevel_t:setString(string.format("當前為第%s輪，本輪選秀需要：",ActivityData.eventAttr.sg_curLevel ))
+		self._selectLevel_t:setString(string.format(LanguageConfig.language_selectGirl_5,ActivityData.eventAttr.sg_curLevel ))
 		self._needGold_t:setVisible(true)
 		self._gold_t:setVisible(true)
 	end
 	Functions.bindUiWithModelAttr(self._selectLevel_t, ActivityData, "sg_curLevel",function(event)
 		if event.data > g_xmcfg.maxCount then 
-			self._selectLevel_t:setString("该批秀女投票投票次数已满，换一批试试")
+			self._selectLevel_t:setString(LanguageConfig.language_selectGirl_6)
 			self._needGold_t:setVisible(false)
 			self._gold_t:setVisible(false)
 		else
-			self._selectLevel_t:setString(string.format("當前為第%s輪，本輪選秀需要：",event.data))
+			self._selectLevel_t:setString(string.format(LanguageConfig.language_selectGirl_5,event.data))
 			self._needGold_t:setVisible(true)
 			self._gold_t:setVisible(true)
 		end
@@ -137,7 +142,7 @@ function SelectGirlPopView:setActivityTime()
 						   tostring(ActivityData.selectGirl.sg_activityEndTime[3])
 						  )
 	else
-		self._activityTime_t:setString("活动已结束")
+		self._activityTime_t:setString(LanguageConfig.language_selectGirl_7)
 	end
 end
 function SelectGirlPopView:setActivityTimeOut( )
@@ -145,7 +150,7 @@ function SelectGirlPopView:setActivityTimeOut( )
 		local time = TimerManager:format_time(math.floor(ActivityData.eventAttr.sg_activityTimeout),LanguageConfig.language_activity_2)
 		self._activityTimeOut_t:setString(time)
 	else
-		self._activityTimeOut_t:setString("活动已结束")
+		self._activityTimeOut_t:setString(LanguageConfig.language_selectGirl_7)
 	end
 end
 function SelectGirlPopView:bindSelectGirlBt()
@@ -176,7 +181,7 @@ function SelectGirlPopView:updateGirlRes()
 		local girlName = girlButton:getChildByName("name")
 		girlImg:ignoreContentAdaptWithSize(true)
 		Functions.loadImageWithWidget(girlImg, string.format("girl/%s.png",ActivityData.selectGirl.sg_girlIds[i]))
-		girlName:setString(g_xmcfg.girlName[ActivityData.selectGirl.sg_girlIds[i]])
+		girlName:setString(g_girlName[ActivityData.selectGirl.sg_girlIds[i]])
 	end
 end
 function SelectGirlPopView:setShowStyle()

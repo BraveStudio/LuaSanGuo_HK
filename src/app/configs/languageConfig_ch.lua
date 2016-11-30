@@ -814,7 +814,15 @@ local languageConfig_ch =
         language_equip_6 = "很遗憾，本次洗练失败，再试一次吧！",
         language_equip_7 = "很遗憾，本次合成失败，再试一次吧！",
         --选秀系统
-        language_selectGirl_1 = "很遗憾，本次合成失败，再试一次吧！",
+        language_selectGirl_1 = "活动时间：",
+        language_selectGirl_2 = "活动倒计时：",
+        language_selectGirl_3 = "本期秀女",
+        language_selectGirl_4 = "秀女选票排行榜",
+        language_selectGirl_5 = "当前为第%s輪，本轮选秀需要：",
+        language_selectGirl_6 = "该批秀女投票投票次数已满，换一批试试",
+        language_selectGirl_7 = "活动已结束",
+        language_selectGirl_8 = "使用经验丹成功!增加%s主公经验！",
+        language_selectGirl_9 = "是否花费%s元宝重置秀女",
         --固定UI文字
 
         ui_activityHero_1 = "活动时间：",

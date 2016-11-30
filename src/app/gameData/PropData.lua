@@ -113,7 +113,7 @@ function PropData:RequestUseExpWater(id,_handler)
             GameCtlManager:getCurrentController():openChildView("app.ui.popViews.LevelUpPopView", { isRemove = false, data = { oldLevel = oldLevel,
                  newLevel = PlayerData.eventAttr.m_level, upLevelAward = upLevelAward,isOpenGuide = false}})
         else
-             PromptManager:openTipPrompt(string.format( "使用经验丹成功!增加%s主公经验！",addExp))
+             PromptManager:openTipPrompt(string.format(LanguageConfig.language_selectGirl_8,addExp))
         end
         if _handler then
             _handler()
