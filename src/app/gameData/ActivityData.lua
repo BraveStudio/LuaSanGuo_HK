@@ -212,6 +212,7 @@ function ActivityData:init()
         self.eventAttr.sg_curLevel = self.selectGirl.sg_curLevel
         self.eventAttr.sg_curNeedGold = self.selectGirl.sg_curNeedGold
         self.eventAttr.sg_isOpneSelectGirl = self.selectGirl.sg_isOpneSelectGirl 
+        self.eventAttr.sg_sys_isOpenSelectGirl = self.selectGirl.sg_sys_isOpenSelectGirl
         local listener = function( )
             if self.eventAttr.sg_activityTimeout >= 1 then
                 self.eventAttr.sg_activityTimeout = self.eventAttr.sg_activityTimeout - 1    

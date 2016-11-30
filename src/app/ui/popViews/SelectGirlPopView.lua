@@ -76,6 +76,7 @@ end
 --@auto code output func
 function SelectGirlPopView:getPopAction()
 	Functions.printInfo(self.debug,"pop actionFunc is call")
+	Functions.playScaleOpenChildViewAction(self)
 end
 
 function SelectGirlPopView:onDisplayView()
