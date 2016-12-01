@@ -542,7 +542,8 @@ function ActivityData:requestSelectGirlRank(girlMark,_handler)
     local onServerRequest = function(event)
         local allVoteNum = event.data.num
         local rankData = {}
-        for k,v in pairs(event.data.playerinfo) do
+        local playerInfo = event.data.playerinfo or {}
+        for k,v in pairs(playerInfo) do
             local tempData = {}
             tempData.playerName = v.name
             tempData.voteNum = v.count

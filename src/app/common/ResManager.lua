@@ -33,7 +33,7 @@ function ResManager:loadCommonRes(callBack)
     }
     local commonSpriteFrames = 
     {
-        "icons","gameRes","CC_commonText","CBO_combatdbar","CBO_noviceKuang","CBO_tipsTwo","CB_bar","CB_board","CC_comCard","propRes"
+        "icons","gameRes","CC_commonText","CBO_combatdbar","CBO_noviceKuang","CBO_tipsTwo","CB_bar","CB_board","CC_comCard","propRes","equipmentRes"
     }
     Functions.tableSeqFunc(commonAnima, handler(self, self.loadAnimaFunc_), function()
         Functions.tableSeqFunc(commonSpriteFrames, handler(self, self.loadSpriteFrameResFunc_),callBack)

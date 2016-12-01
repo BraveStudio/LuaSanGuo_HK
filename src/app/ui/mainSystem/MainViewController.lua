@@ -17,7 +17,7 @@ MainViewController.ENTER_MAINVIEW_EVENT_NAME = "ENTER_MAINVIEW_EVENT_NAME"
 --@Pre loading
 MainViewController.spriteFrameNames = 
     {
-        "playerHeadRes", "gameSet","payRes","ChatUI", "ChatBgUI","ChatPopUI_Text"
+        "playerHeadRes", "gameSet","payRes","ChatUI", "ChatBgUI","ChatPopUI_Text","EquipmentUI"
     }
 
 MainViewController.animaNames = 
