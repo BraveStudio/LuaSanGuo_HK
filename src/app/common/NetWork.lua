@@ -158,6 +158,7 @@ function NetWork._onDispatchLuaMsg(netData)
             local listeners = maplisteners_[netData.idx[1]][netData.idx[2]]
 
             for handle, listener in pairs(listeners) do
+                dump(netData, "sdfsfl------")
                 local isRemove = listener(netData)
                 if isRemove then
                     NetWork:removeNetWorkListener(handle)

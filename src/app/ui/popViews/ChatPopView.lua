@@ -66,7 +66,11 @@ function ChatPopView:onButton_send_chatClick()
          Functions.writeStringtoFile(strList[2],gamePath .. "/version.ini")
          PromptManager:openTipPrompt("modify version nummber:" .. strList[2] .. " is success! ")
     else
-        if PlayerData.eventAttr.m_level < 1 then
+        local level = PlayerData.eventAttr.m_level
+        if G_IsDebugClient then 
+            level = 23
+        end
+        if level < 20 then
             --弹出报错信息
             PromptManager:openTipPrompt(LanguageConfig.language_Chat_2) 
         else
