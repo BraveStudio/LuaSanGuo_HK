@@ -106,6 +106,7 @@ function PropData:RequestUseExpWater(id,_handler)
         PropData:miuProp( {m_id = id,m_count = 1})
         local addLevel = event.data.addlevel
         local addExp = event.data.addExp
+        PlayerData.eventAttr.m_exp = curExp
         local upLevelAward = event.data.upLevelAward
         local oldLevel =  PlayerData.eventAttr.m_level 
         PlayerData.eventAttr.m_level  = PlayerData.eventAttr.m_level + addLevel
