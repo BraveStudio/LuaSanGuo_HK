@@ -26,7 +26,7 @@ CC_DESIGN_RESOLUTION = {
 }
 
 -- 是否是运营维护apk 
-G_IsDebugClient = false
+G_IsDebugClient = true
 
 -- update
 -- true 使用更新功能， fales 不使用更新功能,用于当前代码调试

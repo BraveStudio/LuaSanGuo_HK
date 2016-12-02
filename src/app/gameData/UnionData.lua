@@ -63,16 +63,18 @@ function UnionData:init()
         PlayerData.eventAttr.m_tongID = event.id
         local msgList = event.data
         
-        for k, v in pairs(msgList) do
-            local info = {}
-            info.m_id = k+6    --关卡ID
-            info.progress = v.progress   --进度值(0到1之间的一个值)
-            info.allpassed = v.allpassed --是否全部通关(0带表没通关,1代表通关)
-            info.purchased = v.purchased --是否购买(0带表没购买,1代表购买)
-
-            self.unionFBDatas[#self.unionFBDatas+1] = info
+        if msgList then
+            for k, v in pairs(msgList) do
+                local info = {}
+                info.m_id = k+6    --关卡ID
+                info.progress = v.progress   --进度值(0到1之间的一个值)
+                info.allpassed = v.allpassed --是否全部通关(0带表没通关,1代表通关)
+                info.purchased = v.purchased --是否购买(0带表没购买,1代表购买)
+    
+                self.unionFBDatas[#self.unionFBDatas+1] = info
+            end
+            GameEventCenter:dispatchEvent({ name = UnionData.UNION_FB_EVENT, data = {} })
         end
-        GameEventCenter:dispatchEvent({ name = UnionData.UNION_FB_EVENT, data = {} })
     end
     NetWork:addNetWorkListener({ 2, 18 }, onSendMsg)    
 
@@ -442,5 +444,6 @@ function UnionData:getMemberFBSort()
     table.sort(self.unionMemberInfo, comp)
     --return self.unionMemberInfo
 end
+
 
 return UnionData

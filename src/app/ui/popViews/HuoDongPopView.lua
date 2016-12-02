@@ -1021,12 +1021,14 @@ function HuoDongPopView:ShowChengJiu()
 
         if data.bz == 0 then
             Functions.setEnabledBt(button:getChildByName("Button_get"),false)
+            Functions.loadImageWithWidget(button:getChildByName("Button_get"):getChildByName("Image_get"),"commonUI/res/common/lingqu.png")
         elseif data.bz == 2 then
             Functions.setEnabledBt(button:getChildByName("Button_get"),false)
             button:getChildByName("Button_get"):getChildByName("Image_get"):ignoreContentAdaptWithSize(true)
             Functions.loadImageWithWidget(button:getChildByName("Button_get"):getChildByName("Image_get"),"commonUI/res/common/yilingqu.png")
         elseif data.bz == 1 then
             Functions.setEnabledBt(button:getChildByName("Button_get"),true)
+            Functions.loadImageWithWidget(button:getChildByName("Button_get"):getChildByName("Image_get"),"commonUI/res/common/lingqu.png")
         end
     
     end
@@ -1034,9 +1036,11 @@ function HuoDongPopView:ShowChengJiu()
     local romveNodeHandler = function(widget)
         Functions.removeEventBeforeUiClean(widget)
     end
-
+    local cleanNodeHandler = function(widget)
+    	
+    end
     Functions.bindTableViewWithData(self._Panel_list_cheng_jiu_t,{ firstData = ActivityData:getChengJiu() },
-    {handler = listHandler, romveNodeHandler = romveNodeHandler},{direction = true, col = 1, firstSegment = 0, segment = 2 }) 
+    {handler = listHandler,handler2 = cleanNodeHandler,romveNodeHandler = romveNodeHandler},{direction = true, col = 1, firstSegment = 0, segment = 2 }) 
 end
 
 --点赞

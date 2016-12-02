@@ -54,6 +54,7 @@ NetWork:addNetWorkListener({ 2, 33 }, onAllBZ)
 
 --英雄之旅标志
 local onLvCheng = function(event)
+    CarnivalData.lvCheng = g_heroTravelconfig
     for i, v in pairs(event.tb) do
         if CarnivalData.lvCheng[v].day <= PlayerData.eventAttr.day then
             CarnivalData.lvChengBZ = true
@@ -105,6 +106,7 @@ function CarnivalData:sendLvCheng(listener)
     local onServerRequest = function (event)
         CarnivalData.lvCheng = g_heroTravelconfig
         for k,v in pairs(event.data) do
+            print("kkkkkkkkkkkkkk",k)
             assert(CarnivalData.lvCheng[k].bz,"CarnivalData.lvCheng[k].bz————无数据")
             CarnivalData.lvCheng[k].bz = v
         end
