@@ -32,8 +32,10 @@ function HeroKillGuanKaViewController:onDidLoadView()
 	self._resNode_t = self.view_t.csbNode:getChildByName("main"):getChildByName("resNode")
 	self._Text_small_str_t = self.view_t.csbNode:getChildByName("main"):getChildByName("Panel_right"):getChildByName("Text_small_str")
 	self._Sprite_box_light_small_t = self.view_t.csbNode:getChildByName("main"):getChildByName("Panel_right"):getChildByName("Sprite_box_light_small")
+	self._Sprite_6_ling_qu_t = self.view_t.csbNode:getChildByName("main"):getChildByName("Panel_right"):getChildByName("Button_small"):getChildByName("Sprite_6_ling_qu")
 	self._Text_lot_str_t = self.view_t.csbNode:getChildByName("main"):getChildByName("Panel_right"):getChildByName("Text_lot_str")
 	self._Sprite_box_light_lot_t = self.view_t.csbNode:getChildByName("main"):getChildByName("Panel_right"):getChildByName("Sprite_box_light_lot")
+	self._Sprite_12_ling_qu_t = self.view_t.csbNode:getChildByName("main"):getChildByName("Panel_right"):getChildByName("Button_lot"):getChildByName("Sprite_12_ling_qu")
 	self._Text_count_1_t = self.view_t.csbNode:getChildByName("Panel_ban"):getChildByName("Panel_bg"):getChildByName("Panel_difficulty_1"):getChildByName("Image_count_1"):getChildByName("Text_count_1")
 	self._Panel_star_1_t = self.view_t.csbNode:getChildByName("Panel_ban"):getChildByName("Panel_bg"):getChildByName("Panel_difficulty_1"):getChildByName("Panel_star_1")
 	self._Text_count_2_t = self.view_t.csbNode:getChildByName("Panel_ban"):getChildByName("Panel_bg"):getChildByName("Panel_difficulty_2"):getChildByName("Image_count_2"):getChildByName("Text_count_2")
@@ -140,6 +142,7 @@ function HeroKillGuanKaViewController:onDisplayView()
     self.smallID = 1
     self:getOpenInit()
     self:show()
+    self:updateBOX()
 end
 --@auto code view display func end
 
@@ -298,14 +301,21 @@ end
 
 --接受push数据
 function HeroKillGuanKaViewController:updateBOX()
+    local dataFlag = HeroKillData:getHeroKillData()[self.ID]
 
     --星星宝箱外发光
-    if HeroKillData:getHeroKillData()[self.ID].starFlag1 ~= 1 then
+    if dataFlag.starFlag1 ~= 1 then
         self._Sprite_box_light_small_t:setVisible(false)
+        if dataFlag.starFlag1 == 2 then
+            self._Sprite_6_ling_qu_t:setVisible(true)
+        end
     end
     --星星宝箱外发光
-    if HeroKillData:getHeroKillData()[self.ID].starFlag2 ~= 1 then
+    if dataFlag.starFlag2 ~= 1 then
         self._Sprite_box_light_lot_t:setVisible(false)
+        if dataFlag.starFlag2 == 2 then
+            self._Sprite_12_ling_qu_t:setVisible(true)
+        end
     end
     
     self._Sprite_box_light_small_t:setVisible(false)

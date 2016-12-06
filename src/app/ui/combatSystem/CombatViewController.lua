@@ -1031,6 +1031,7 @@ function CombatViewController:moveCenterOfHero(heroView, moveEndCall)
     local oldPos = { x = heroView:getPositionX(), y = heroView:getPositionY() }
     oldPos = heroView:getParent():convertToWorldSpace(oldPos)
 
+    self._combatPanel_t:stopAllActions()
     local movePos = { x = display.cx - oldPos.x, y = display.cy - oldPos.y }
 
     local cmbp_x = self._combatPanel_t:getPositionX()
@@ -1062,9 +1063,12 @@ function CombatViewController:moveCenterOfHero(heroView, moveEndCall)
 
     self._combatPanel_t:moveBy({  x = movePos.x,
                                   y = movePos.y,
-                                  time = 0.3,
-                                  onComplete = moveEndCall
+                                  time = 0.3,                        
                               })
+
+    scheduler.performWithDelayGlobal(function()
+        moveEndCall()
+    end, 0.3)
 
 end
 
