@@ -56,7 +56,7 @@ G_IsAutoGetUrl = false
 G_AutoPatchUrl = "http://hjbylogin.tanyu.mobi:8095/sanguoGM/sanguoGMSomeFunc/GetOneItemInfo"
 
 --当前设备类型： 1 android, 2 ios
-G_DeviceType = 1
+G_DeviceType = 2
 
 --当前平台： -1 maintenance 0 test 1 N-store, 2 T-store, 3 C-store, 4 gplay 5 ios-store 6 anysdk-ios
 G_PlatformType = 6

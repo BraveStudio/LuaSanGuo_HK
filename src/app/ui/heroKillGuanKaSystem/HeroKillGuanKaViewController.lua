@@ -158,15 +158,21 @@ function HeroKillGuanKaViewController:show()
         Functions.setEnabledBt(self._Button_saodang_t,false)
     end
     
+--    self._Sprite_box_light_small_t:stopAllActions()
+--    self._Sprite_box_light_lot_t:stopAllActions()
     --星星宝箱外发光
     if HeroKillData:getHeroKillData()[self.ID].starFlag1 == 1 then
-        self._Sprite_box_light_small_t:setVisible(true)
-        Functions.playActionWithBackCall(self._Sprite_box_light_small_t, UIActionTool:createBlinkAction(0.6))
+        if not self._Sprite_box_light_small_t:isVisible() then
+            self._Sprite_box_light_small_t:setVisible(true)
+            Functions.playActionWithBackCall(self._Sprite_box_light_small_t, UIActionTool:createBlinkAction(0.6))
+        end
     end
         --星星宝箱外发光
     if HeroKillData:getHeroKillData()[self.ID].starFlag2 == 1 then
-        self._Sprite_box_light_small_t:setVisible(true)
-        Functions.playActionWithBackCall(self._Sprite_box_light_lot_t, UIActionTool:createBlinkAction(0.6))
+        if not self._Sprite_box_light_lot_t:isVisible() then
+            self._Sprite_box_light_lot_t:setVisible(true)
+            Functions.playActionWithBackCall(self._Sprite_box_light_lot_t, UIActionTool:createBlinkAction(0.6))
+        end
     end
     
     
@@ -318,7 +324,7 @@ function HeroKillGuanKaViewController:updateBOX()
         end
     end
     
-    self._Sprite_box_light_small_t:setVisible(false)
+    --self._Sprite_box_light_small_t:setVisible(false)
 end
 
 --接受扫荡后的回调数据
