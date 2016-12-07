@@ -36,11 +36,13 @@ end
 
 NetWork.ServerStatusCode =
 {
-    online = 1,
-    shutdown = 2,
-    busy = 3,
-    maintain = 4,
-    wait = 5,
+    online = 1,--正常
+    shutdown = 2, --关闭
+    busy = 3, -- 繁忙
+    maintain = 4,-- 维护
+    wait = 5, --即将开放
+    baoman = 6, --爆满
+    newserver = 7 -- 新服
 }
 
 NetWork.NetWorkType = 

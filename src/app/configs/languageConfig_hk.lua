@@ -822,7 +822,7 @@ local languageConfig_ch =
 ["guide_5_1"]="點擊出征，準備開戰吧",
 ["language_0_41"]="支付失敗!請檢查當前NaverAppStore帳號是否與Android設備關聯成功，或重新登陸NaverAppStore帳號!",
 ["ui_CombatView_Fb_4"]="第四章",
-["Server_State_3"]="爆滿",
+["Server_State_3"]="繁忙",
 ["language_Enlist_6"]="今次必出6星武將",
 ["language_9_34"]="武魂不足，無法完成進階。",
 ["language_6_13"]="尚未獲得60星，不能領取獎勵!",
@@ -1293,5 +1293,7 @@ local languageConfig_ch =
 ["language_Holiday_1"] = "已經消費：%d元寶",
 ["language_Chat_2"] = "等級達到20級以後才能發送世界消息！",
 ["language_Holiday_2"] = "還可購買%d次",
+["Server_State_6"] = "爆滿",
+["Server_State_7"] = "新服",
 }
  return languageConfig_ch

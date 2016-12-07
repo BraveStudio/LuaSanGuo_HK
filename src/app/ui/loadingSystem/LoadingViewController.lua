@@ -261,7 +261,7 @@ function LoadingViewController:update(dt)
 end
 
 function LoadingViewController:sdkUpdateCall() 
-    if G_IsUseSDK then
+    if G_IsUseSDK and G_DeviceType == 1 then
         local scheduler = require("app.common.scheduler")
         Functions.setPopupKey("start")
         if G_SDKType == 1 then 

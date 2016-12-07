@@ -3,10 +3,10 @@ local ServerConfig = {}
 -- 171.212.112.50:8095
 ServerConfig.LocalServer = 
 {
-  PUBLICE_AND = "http://192.168.0.104:8085/sanguoGM/",
-  updateUrl = "http://192.168.0.104:8888/sanguoUpdate/"
---   PUBLICE_AND = "http://121.40.145.163:8085/sanguoGM/",
---   updateUrl = "http://z5.tanyu.mobi/hjby/"
+      PUBLICE_AND = "http://192.168.0.104:8085/sanguoGM/",
+      updateUrl = "http://192.168.0.104:8100/sanguoUpdate/"
+  -- PUBLICE_AND = "http://121.40.145.163:8085/sanguoGM/",
+  -- updateUrl = "http://z5.tanyu.mobi/hjby/"
 }
 
 

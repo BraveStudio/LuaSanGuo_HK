@@ -299,6 +299,10 @@ function SevenStarViewController:refrashStar()
             self:clearAtrrSlot()
             self:showAllStarAtrr(self.hunType,SevenStarData.heroMark)
             Functions.setAdbrixTag("retension","seven_castle_try_complete")
+            if SevenStarData.heroMark > 0  then
+                local heroCard = self._card_t:getChildByName("heroCard")
+                Functions.getHeroCrad(heroCard,{mark = SevenStarData.heroMark })
+            end
         end
         SevenStarData:RequestRefrashAtrr(SevenStarData.heroMark,self.hunType,handler)
     end

@@ -164,14 +164,14 @@ function HeroKillGuanKaViewController:show()
     if HeroKillData:getHeroKillData()[self.ID].starFlag1 == 1 then
         if not self._Sprite_box_light_small_t:isVisible() then
             self._Sprite_box_light_small_t:setVisible(true)
-            Functions.playActionWithBackCall(self._Sprite_box_light_small_t, UIActionTool:createBlinkAction(0.6))
+            Functions.playActionWithBackCall(self._Sprite_box_light_small_t, UIActionTool:createBlinkAction(0.5))
         end
     end
         --星星宝箱外发光
     if HeroKillData:getHeroKillData()[self.ID].starFlag2 == 1 then
         if not self._Sprite_box_light_lot_t:isVisible() then
             self._Sprite_box_light_lot_t:setVisible(true)
-            Functions.playActionWithBackCall(self._Sprite_box_light_lot_t, UIActionTool:createBlinkAction(0.6))
+            Functions.playActionWithBackCall(self._Sprite_box_light_lot_t, UIActionTool:createBlinkAction(0.5))
         end
     end
     

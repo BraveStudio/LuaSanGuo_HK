@@ -335,7 +335,6 @@ function LoginViewController:onDisplayView()
                 self:closeAllPanel()
                 self._serverList_t:show()
             end
-
         else
             self:openLoginView_()
         end
@@ -382,7 +381,6 @@ function LoginViewController:initServerList_()
         local stateText = listChild:getChildByTag(3)
 
         Functions.initTextColor(model:getChildByTag(2), text)
-        Functions.initTextColor(model:getChildByTag(3), stateText)
         Functions.initLabelOfString(text, data.name, stateText, Functions.getServerStateCode(data.status))
 
         listChild:getChildByTag(1):onTouch(Functions.createClickListener(onServerSelectClick))
