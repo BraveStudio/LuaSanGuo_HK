@@ -101,7 +101,7 @@ function SelectGirlPopView:initDisplay()
 	self._inf_t:setString(ActivityData.selectGirl.sg_inf)
 	--活动轮数
 	self._selectLevel_t:setString(string.format(LanguageConfig.language_selectGirl_5,ActivityData.eventAttr.sg_curLevel))
-	if ActivityData.eventAttr.sg_curLevel > g_xmcfg.maxCount then 
+	if ActivityData.eventAttr.sg_curLevel > g_girlMaxCount then 
 		self._selectLevel_t:setString(LanguageConfig.language_selectGirl_6)
 		self._needGold_t:setVisible(false)
 		self._gold_t:setVisible(false)
@@ -111,7 +111,7 @@ function SelectGirlPopView:initDisplay()
 		self._gold_t:setVisible(true)
 	end
 	Functions.bindUiWithModelAttr(self._selectLevel_t, ActivityData, "sg_curLevel",function(event)
-		if event.data > g_xmcfg.maxCount then 
+		if event.data > g_girlMaxCount then 
 			self._selectLevel_t:setString(LanguageConfig.language_selectGirl_6)
 			self._needGold_t:setVisible(false)
 			self._gold_t:setVisible(false)
