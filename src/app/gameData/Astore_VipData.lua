@@ -25,7 +25,31 @@ function VipData:init()
         GameEventCenter:dispatchEvent({ name = "PAY_ACTIVITY"})
     end
     NetWork:addNetWorkListener({ 2, 16 }, onVipInit)
-
+    local onServerRequest = function (event)
+        PlayerData.eventAttr.firstbl = event.firstbl
+        GameEventCenter:dispatchEvent({ name = "PAY_ACTIVITY"})
+        for i = VipData.eventAttr.m_vipLevel+1, event.vipLevel do
+            VipData.eventAttr.m_vipReward[i+1] = true
+        end
+        VipData.eventAttr.m_vipLevel = event.vipLevel
+        VipData.eventAttr.m_recharge = event.recharge
+        PlayerData.eventAttr.m_gold = event.gold    
+        PlayerData.eventAttr.m_vipFirstFlag = event.firstFlag
+        self:updateVipRewardFlag()    
+        -- Analytics:onChargeSuccess()
+        GameState.storeAttr.curNonce_s = ""
+        GameState.storeAttr.paymentSeq_s = ""
+        GameState.storeAttr.curProductCode_s = ""
+        local tempStr = ""
+        if event.curPayGold == g_payProductConfig_Qstore[1].gold then 
+            tempStr = g_payProductConfig_Qstore[1].show_goldStr
+        else
+            tempStr = tostring(event.curPayGold) .. LanguageConfig.language_pay_2
+        end
+        local tipsStr = string.format(LanguageConfig.language_task_speaker_12,tempStr)
+        PromptManager:openSpeakerPrompt(tipsStr,nil,LanguageConfig.language_task_15)
+    end
+    NetWork:addNetWorkListener({25,2}, Functions.createNetworkListener(onServerRequest, false, "ret")) 
     -- local adbrixHandler = function (event)
     --     if event.rmb ~= nil then            
     --         Functions.setAdbrixTag("buy",tostring(g_payShowRMB[event.rmb]))
@@ -89,7 +113,27 @@ function VipData:needToConsumProduct()
         end 
     end)    
 end
-
+--发送是否可购买月卡接口
+function VipData:requestIsBuyMonthCard(handler)
+   --监听服务器数据
+    local onServerRequest = function (event)
+        if handler ~= nil then
+            handler(event)
+        end
+    end
+    NetWork:addNetWorkListener({25,7}, Functions.createNetworkListener(onServerRequest, true, "ret"))
+    local msg = {idx = {25, 7}}
+    NetWork:sendToServer(msg)
+end
+function VipData:buyMonthCard()
+    self:requestIsBuyMonthCard(function( )
+          local data = g_payProductConfig_Qstore[1]
+          Functions.callJavaFuc(function()
+              PromptManager:openHttpLinkPrompt() 
+               NativeUtil:javaCallHanler({command = "pay",productCode = data.productCode,money = tostring(data.money),productName = data.productName,serverId = tostring(NetWork.serverId)})
+           end)     
+     end) 
+end
 --更新可领取礼包状态
 function VipData:updateVipRewardFlag()
     for i = 0,VipData.eventAttr.m_vipLevel do

@@ -124,7 +124,7 @@ function PayPopView:initDisplayUI()
           bonus:setVisible(true)
           bonus:getChildByName("rate"):setString(tostring(data.rate) .. "%")
         end
-        if G_SDKType == 7 then 
+        if G_SDKType == 7 or G_SDKType == 5 then 
             widget:getChildByName("unit"):setVisible(false)
         else
             widget:getChildByName("unit"):setVisible(true)
@@ -151,7 +151,7 @@ function PayPopView:initDisplayUI()
                             PluginChannel:pay(index,data)
                       end)      
                  end) 
-              elseif index == 1  and G_SDKType == 7 then 
+              elseif index == 1  and (G_SDKType == 7 or G_SDKType == 5)then 
                  VipData:requestIsBuyMonthCard(function( ) 
                       Functions.callJavaFuc(function()
                         PromptManager:openHttpLinkPrompt() 

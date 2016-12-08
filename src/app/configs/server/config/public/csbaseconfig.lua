@@ -1270,7 +1270,7 @@ g_gzCfg =
 	boostreward = {{-3,4,100000}},		--援军每日奖励
 	power = 						--名次对应权利
 	{
-		[1] = {g_LanguageTbl.gz[23][g_Language],g_LanguageTbl.gz[24][g_Language],g_LanguageTbl.gz[25][g_Language],g_LanguageTbl.gz[26][g_Language],g_LanguageTbl.gz[26][g_Language]},
+		[1] = {g_LanguageTbl.gz[23][g_Language],g_LanguageTbl.gz[24][g_Language],g_LanguageTbl.gz[25][g_Language],g_LanguageTbl.gz[26][g_Language],g_LanguageTbl.gz[27][g_Language]},
 		[2] = {g_LanguageTbl.gz[28][g_Language],g_LanguageTbl.gz[29][g_Language],g_LanguageTbl.gz[30][g_Language],g_LanguageTbl.gz[31][g_Language]},
 		[3] = {g_LanguageTbl.gz[32][g_Language],g_LanguageTbl.gz[33][g_Language],g_LanguageTbl.gz[34][g_Language],g_LanguageTbl.gz[35][g_Language]},
 		[4] = {g_LanguageTbl.gz[36][g_Language],g_LanguageTbl.gz[37][g_Language],g_LanguageTbl.gz[38][g_Language],g_LanguageTbl.gz[39][g_Language]},
@@ -1482,14 +1482,13 @@ g_payProductConfig_Gplay =
 }
 g_payProductConfig_Astore = 
 {
-	[1] = {productCode = "cash_500",show_moneyStr = "11,000",show_goldStr = "500元宝",img = "pay_3.png",gold = 500, money = 11000, multiple = 2,isRecommand = true,rate = 0, inf = LanguageConfig.ui_payInf_1},
-	[2] = {productCode = "cash_1500",show_moneyStr = "33,000",show_goldStr = "1,500元宝",img = "pay_4.png",gold = 1500, money = 33000, multiple = 2,isRecommand = true,rate = 0, inf = LanguageConfig.ui_payInf_1},
-	[3] = {productCode = "cash_11000",show_moneyStr = "199,900",show_goldStr = "11,000元宝",img = "pay_8.png",gold = 11000, money = 199900, multiple = 2,isRecommand = false,rate = 0, inf = LanguageConfig.ui_payInf_1},
-	[4] = {productCode = "cash_7500",show_moneyStr = "55,000",show_goldStr = "7,500元宝",img = "pay_7.png",gold = 7500, money = 150000, multiple = 2,isRecommand = false,rate = 0, inf = LanguageConfig.ui_payInf_1},
-	[5] = {productCode = "cash_5000",show_moneyStr = "110,000",show_goldStr = "5,000元宝",img = "pay_5.png",gold = 5000, money = 110000, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
-	[6] = {productCode = "cash_2500",show_moneyStr = "55,000",show_goldStr = "2,500元宝",img = "pay_5.png",gold = 2500, money = 55000, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
-	[7] = {productCode = "cash_250",show_moneyStr = "5,500",show_goldStr = "250元宝",img = "pay_2.png",gold = 250, money = 5500, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
-    [8] = {productCode = "cash_150",show_moneyStr = "3,300",show_goldStr = "150元宝",img = "pay_1.png",gold = 150, money = 3300, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
+	[1] = {productName = "zgbky_moon",productCode = "zgbky_moon",show_moneyStr = "$30",show_goldStr = "月卡+300元寶",img = "pay_9.png",gold = 300, money = 30, multiple = 1, isRecommand = true,rate = 0,inf = ""},
+	[2] = {productName = "zgbky_20",productCode = "zgbky_20",show_moneyStr = "$20",show_goldStr = "1,000元寶",img = "pay_3.png",gold = 1000, money = 20, multiple = 2,isRecommand = true,rate = 0, inf = LanguageConfig.ui_payInf_1},
+	[3] = {productName = "zgbky_50",productCode = "zgbky_50",show_moneyStr = "$50",show_goldStr = "2,500元寶",img = "pay_4.png",gold = 2500, money = 50, multiple = 2,isRecommand = false,rate = 0, inf = LanguageConfig.ui_payInf_1},	
+	[4] = {productName = "zgbky_100",productCode = "zgbky_100",show_moneyStr = "$100",show_goldStr = "5,000元寶",img = "pay_6.png",gold = 5000, money = 100, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
+	[5] = {productName = "zgbky_200",productCode = "zgbky_200",show_moneyStr = "$200",show_goldStr = "10,000元寶",img = "pay_5.png",gold = 10000, money = 200, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
+	[6] = {productName = "zgbky_5",productCode = "zgbky_5",show_moneyStr = "$5",show_goldStr = "250元寶",img = "pay_2.png",gold = 250, money = 5, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
+    [7] = {productName = "zgbky_1",productCode = "zgbky_1",show_moneyStr = "$1",show_goldStr = "50元寶",img = "pay_1.png",gold = 50, money = 1, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
 }
 g_payProductConfig_Qstore = 
 {
@@ -2162,6 +2161,7 @@ g_OnLineConReward =
 --    	},
 -- }
 g_girlName = {"劉備","曹操","呂玲琦","孫尚香","夏侯惇","小喬","張飛","張遼","周瑜","諸葛亮","甄姬","祝融","貂蟬","蔡文姬","關羽","孫權"}
+g_girlMaxCount = 4
 --选美
 -- g_xmcfg = 
 -- {

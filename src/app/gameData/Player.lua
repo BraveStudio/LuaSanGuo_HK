@@ -195,4 +195,29 @@ function Player:webLogin(userName, password, onLoginSuccess)
     NetWork:loginUserServer(userName, password, onLoginSuccess)
 end
 
+function Player:soapLogin(userName, password)
+    
+    local url = ServerConfig.currentURL .. "sanguoGMSomeFunc/GetSoapCusId"
+    local param = "pNam=".. userName .. "&pwd=" .. password
+    PromptManager:openHttpLinkPrompt()
+
+    local loginSuccessCB = function()
+        GameState.storeAttr.userName_s = userName
+        GameState.storeAttr.password_s = password
+    end
+    HttpClient:sendHttpRequest(url, param, function(state, data)
+        PromptManager:closeHttpLinkPrompt()
+            if state == 0 then
+                local urlTable = cjson.decode(data)
+                if urlTable.status then
+                    Functions.sdkLoginHandler(urlTable.customerId, loginSuccessCB)
+                else
+                    PromptManager:openTipPrompt(urlTable.note)
+                end
+            else
+                PromptManager:openTipPrompt("網絡錯誤，請重試！")
+            end
+    end)
+end
+
 return Player

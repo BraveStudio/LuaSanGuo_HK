@@ -26,7 +26,7 @@ CC_DESIGN_RESOLUTION = {
 }
 
 -- 是否是运营维护apk 
-G_IsDebugClient = false
+G_IsDebugClient = true
 
 -- update
 -- true 使用更新功能， fales 不使用更新功能,用于当前代码调试
@@ -39,7 +39,7 @@ G_IsUseSDK = false
 G_SDKType = 6
 
 -- NetWork 是否连接内网，true: 连接内网，false: 连接外网
-G_IsLinkLoaclIp = true
+G_IsLinkLoaclIp = false
 
 
 
@@ -51,15 +51,15 @@ G_ServerId = 4
 -- user: adm
 -- pwd: 123456
 
-G_IsAutoGetUrl = false
--- G_AutoPatchUrl = "http://115.29.163.19:8095/sanguoGM/sanguoGMSomeFunc/GetOneItemInfo"
-G_AutoPatchUrl = "http://hjbylogin.tanyu.mobi:8095/sanguoGM/sanguoGMSomeFunc/GetOneItemInfo"
+G_IsAutoGetUrl = true
+ G_AutoPatchUrl = "http://hjby.appsgirl.com:8095/sanguoGM/sanguoGMSomeFunc/GetOneItemInfo"
+--G_AutoPatchUrl = "http://hjbylogin.tanyu.mobi:8095/sanguoGM/sanguoGMSomeFunc/GetOneItemInfo"
 
 --当前设备类型： 1 android, 2 ios
 G_DeviceType = 1
 
 --当前平台： -1 maintenance 0 test 1 N-store, 2 T-store, 3 C-store, 4 gplay 5 ios-store 6 anysdk-ios
-G_PlatformType = 6
+G_PlatformType = -1
 
 --当前语言
 G_CurrentLanguage = "hk"
@@ -76,8 +76,8 @@ G_IsHaveLanchImage = false
 G_isFirstStartApp = true 
 --当前版本
 CurrentBigVersion = 3
-CurrentMidVersion = 2
-CurrentMinVersion = 3
+CurrentMidVersion = 3
+CurrentMinVersion = 9
 
 --输出内存信息
 DEBUG_MEM = false

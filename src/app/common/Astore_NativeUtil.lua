@@ -12,26 +12,21 @@ function NativeUtil:init()
 
     GameEventCenter:addEventListener("ENTER_MAINVIEW_EVENT_NAME", function ( ) 
         VipData:needToConsumProduct()
-        if isOpenPopup then  
-            isOpenPopup = false
+        if G_isFirstStartApp then 
+            G_isFirstStartApp = false
+            if PlayerData.eventAttr.m_guideStageId == 0 then
+                scheduler.performWithDelayGlobal(function()
+                    NoticeManager:openNotice(GameCtlManager.currentController_t, { type = NoticeManager.SYSTEM_INFO } )
+                end, 0.1)
+            end
             Functions.callJavaFuc(function( )
-                if NetWork.serverName == "test1" then
+                if NetWork.serverName == "22服" then
                    self:javaCallHanler({command = "initNaverIAP",isDebug = true})
                 else
                    self:javaCallHanler({command = "initNaverIAP",isDebug = false}) 
                 end
-                self:javaCallHanler({command = "initNaverCafe",playerName = PlayerData.eventAttr.m_name})
-                if PlayerData.eventAttr.m_guideStageId == 0 then
-                    -- for i = 1,#SDKConfig.popUpKey do 
-                    self:javaCallHanler({command = "openPopUp",popUpKey = "lobby"})
-                    if G_isFirstStartApp then 
-                        self:javaCallHanler({command = "openCafeHome"})
-                        G_isFirstStartApp = false
-                    end  
-                    -- end
-                end
             end)
-        end
+        end  
     end)
 end
 

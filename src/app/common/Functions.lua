@@ -107,7 +107,7 @@ function Functions.delayClickHandler(target, time)
                     end, time)
 end
 function Functions.sharePhotoToFacebook()
-    if G_IsUseSDK and G_SDKType == 7 then
+    if G_IsUseSDK and (G_SDKType == 7 or G_SDKType == 5) then
         cc.utils:captureScreen(function(isSuccess,filePath)
             if isSuccess then 
                 NativeUtil:javaCallHanler({command = "sharePhoto",filePath = filePath})
@@ -116,7 +116,7 @@ function Functions.sharePhotoToFacebook()
     end
 end
 function Functions.shareLinkToFaceBook()
-    if G_IsUseSDK and G_SDKType == 7 then
+    if G_IsUseSDK and (G_SDKType == 7 or G_SDKType == 5)then
          NativeUtil:javaCallHanler({command = "shareLink",title = SDKConfig.fbShareTitle,description = SDKConfig.fbDescription,url = SDKConfig.fbUrl})
     end
 end
@@ -3758,7 +3758,7 @@ function Functions.EnterGame(data)
     require("app.common.GameInit")
     require("app.configs.server.init")
     
-    if G_IsUseSDK then       
+    if G_IsUseSDK and G_SDKType ~= 5 then       
         -- local channelId = ""
         -- Functions.callAnySdkFuc(function( )
         --     channelId = PluginChannel:getChannelId()
@@ -3780,7 +3780,7 @@ function Functions.EnterGame(data)
 
 end
 
-function Functions.sdkLoginHandler(userId)
+function Functions.sdkLoginHandler(userId, cb)
 
     --添加平台区分
     if tonumber(G_SDKType) ~= 1 then
@@ -3806,6 +3806,9 @@ function Functions.sdkLoginHandler(userId)
             GameState.storeAttr.serverToken_s = data.token
             Functions.setAdbrixTag("firstTimeExperience","login_complete")
 
+            if cb then
+                cb()
+            end
             g_ServerList = data.server
             GameState.userCreateTime = data.insertTime
             GameCtlManager:goTo("app.ui.loginSystem.LoginViewController",
@@ -3820,8 +3823,6 @@ function Functions.sdkLoginHandler(userId)
         local data = event.data
         if data then
             if tonumber(data.error) == NetWork.WebErrCode.Success then
-                GameState.storeAttr.userName_s = data.post.username
-                GameState.storeAttr.password_s = data.post.password
                 NetWork:loginUserServer(data.post.username, data.post.password, onLoginSuccess)
             elseif tonumber(data.error) == NetWork.WebErrCode.Register_User_already then
                 NetWork:loginUserServer(userId, userId, onLoginSuccess)

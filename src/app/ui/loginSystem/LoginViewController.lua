@@ -151,8 +151,11 @@ function LoginViewController:onTest_buttonClick()
             PromptManager:openTipPrompt(LanguageConfig.language_Login_1)
         end
     end
-
-    Player:webLogin(userName, password, onLoginSuccess)
+    if G_IsUseSDK and G_SDKType == 5 then
+        Player:soapLogin(userName, password)
+    else
+        Player:webLogin(userName, password, onLoginSuccess)
+    end
 end
 --@auto code Test_button btFunc end
 
@@ -342,6 +345,12 @@ function LoginViewController:onDisplayView()
         self:openLoginView_()
     end
 
+    if G_IsUseSDK and G_SDKType == 5 then
+        self._newRegistBt_t:setVisible(false)
+        self._loginUserPassword_text_0_t:setPlaceHolder(LanguageConfig.ui_LoginView_5)
+        self._loginUserName_text_t:setPlaceHolder(LanguageConfig.ui_LoginView_6)
+    end
+
 end
 --@auto code view display func end
 
@@ -369,7 +378,8 @@ function LoginViewController:initServerList_()
     local listHandler = function(index, listChild, data, model)
         function onServerSelectClick()
             if data.status == tostring(NetWork.ServerStatusCode.online)
-                or (data.status ~= tostring(NetWork.ServerStatusCode.online) and G_IsDebugClient) then
+                or (data.status ~= tostring(NetWork.ServerStatusCode.online) and G_IsDebugClient) or 
+                data.status == tostring(NetWork.ServerStatusCode.baoman) or data.status == tostring(NetWork.ServerStatusCode.newserver) then
                 GameState.storeAttr.serverOldIndex_f = index
                 self:openSelectServerPanel_(index)
             else

@@ -591,6 +591,8 @@ local languageConfig_ch =
         ui_LoginView_2 = "最近登录",
         ui_LoginView_3 = "更多服务器列表",
         ui_LoginView_4 = "数字和字母组成(不超过15个字符)",
+        ui_LoginView_5 = "6～15个数字或字母组合",
+        ui_LoginView_6 = "1～15个数字或字母组合",
 
         ui_MainView_1 = "下次体力恢复:",
         ui_MainView_2 = "恢复全部体力:",
