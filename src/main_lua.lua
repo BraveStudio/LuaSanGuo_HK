@@ -13,13 +13,23 @@ local main = function()
     cc.Director:getInstance():replaceScene(rootScene_t)
 	
     if not G_IsHaveLanchImage then
-        local bg = Functions.createSpriteOfSfName("commonUI/res/bg/CB_loginBg.png")
+        local bg = nil
+        if G_IsUseSDK and G_SDKType == 5 then
+            bg = Functions.createSpriteOfSfName("commonUI/res/bg/log_bg.png")
+        else
+            bg = Functions.createSpriteOfSfName("commonUI/res/bg/CB_loginBg.png")
+        end
         bg:addTo(rootScene_t)
         bg:setPosition(cc.p(display.cx, display.cy))
 
         lanchLoadRes()
     else
-        local bg = Functions.createSpriteOfSfName("commonUI/res/bg/custom_bg.png")
+        local bg = nil
+        if G_IsUseSDK and G_SDKType == 5 then
+            bg = Functions.createSpriteOfSfName("commonUI/res/bg/log_bg.png")
+        else
+            bg = Functions.createSpriteOfSfName("commonUI/res/bg/CB_loginBg.png")
+        end
         bg:addTo(rootScene_t)
         bg:setPosition(cc.p(display.cx, display.cy))
         bg:setOpacity(0)

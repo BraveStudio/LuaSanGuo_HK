@@ -20,7 +20,7 @@ local SDKConfig = {}
         [2]= "com.dstamp.sjzb.aos.ostore",
         [3]= "com.dstamp.sjzb.aos.cstore",
         [4]= "com.dstamp.sjzb.aos.gplay",
-        [5]= "com.dstamp.sjzb.ios.astore",
+        [5]= "com.dyhy.hjby.ios",
         [6]= "com.tanyu.hjby.uc",
         [7]= "com.dyhy.hjby.gplay",
     }

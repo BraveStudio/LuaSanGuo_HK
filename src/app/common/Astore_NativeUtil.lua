@@ -100,7 +100,7 @@ function NativeUtil._JniBackCall(msg)
             dump(v, "api_gateway") 
             GameState.storeAttr.curProductCode_s = v["receipt"]["product_id"]
             GameState.storeAttr.paymentSeq_s = v["receipt"]["transaction_id"]
-            GameState.storeAttr.curNonce_s = Functions.tableToString(v["receipt"])
+            GameState.storeAttr.curNonce_s = v["receipt"]["unique_identifier"]
             VipData:RequestVipPay(GameState.storeAttr.curNonce_s,GameState.storeAttr.paymentSeq_s,GameState.storeAttr.curProductCode_s)
             print("GameState.storeAttr.curProductCode_s:" .. GameState.storeAttr.curProductCode_s )
             print("GameState.storeAttr.paymentSeq_s:" .. GameState.storeAttr.paymentSeq_s )

@@ -105,7 +105,7 @@ function UnionFBPopView:showFB()
         Functions.initTextColor(banModel:getChildByName("Text_fb_name"),ban:getChildByName("Text_fb_name"))
         Functions.initTextColor(banModel:getChildByName("Text_fb_Active_num"),ban:getChildByName("Text_fb_Active_num"))
         local nameFB = string.format(LanguageConfig.language_Union_24, data.m_id).." "..ConfigHandler:getCheckPointNameOfID(data.m_id)
-        local BarNum = math.floor(data.progress * 10000)/100
+        local BarNum = math.abs(math.floor(data.progress * 10000)/100)
         local jindu = LanguageConfig.language_Union_12..tostring(BarNum).."％"
         Functions.initLabelOfString(ban:getChildByName("Text_fb_name"), nameFB, ban:getChildByName("Text_fb_Active_num"), tostring(cs_UnionLiven()), ban:getChildByName("Text_jin_du_string"), jindu )
         ban:getChildByName("LoadingBar_tiao"):setPercent(BarNum)

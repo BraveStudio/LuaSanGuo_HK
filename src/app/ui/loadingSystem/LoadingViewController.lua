@@ -32,7 +32,8 @@ end
 function LoadingViewController:onDidLoadView()
 
     --output list
-    self._npc_t = self.view_t.csbNode:getChildByName("main"):getChildByName("npc")
+    self._bg_t = self.view_t.csbNode:getChildByName("main"):getChildByName("bg")
+	self._npc_t = self.view_t.csbNode:getChildByName("main"):getChildByName("npc")
 	self._LoadingPanel_t = self.view_t.csbNode:getChildByName("main"):getChildByName("LoadingPanel")
 	self._LoadingBar_t = self.view_t.csbNode:getChildByName("main"):getChildByName("LoadingPanel"):getChildByName("LoadingBar")
 	self._StateText_t = self.view_t.csbNode:getChildByName("main"):getChildByName("StateText")
@@ -99,6 +100,11 @@ function LoadingViewController:onDisplayView()
     --更新提示面板
     self._updateVersionPanel_t:setVisible(false)
     self._updateColorPanel_t:setVisible(false)
+
+    -- 港台ios版本切换bg
+    if G_IsUseSDK and G_SDKType == 5 then
+        Functions.loadImageWithSprite(self._bg_t, "commonUI/res/bg/log_bg.png", scale)
+    end
 
     --平台包名
     Functions.callJavaFuc(function()            
