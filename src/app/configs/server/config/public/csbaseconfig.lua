@@ -1482,13 +1482,13 @@ g_payProductConfig_Gplay =
 }
 g_payProductConfig_Astore = 
 {
-	[1] = {productName = "zgbky_moon",productCode = "zgbky_moon",show_moneyStr = "$30",show_goldStr = "月卡+300元寶",img = "pay_9.png",gold = 300, money = 30, multiple = 1, isRecommand = true,rate = 0,inf = ""},
-	[2] = {productName = "zgbky_20",productCode = "zgbky_20",show_moneyStr = "$20",show_goldStr = "1,000元寶",img = "pay_3.png",gold = 1000, money = 20, multiple = 2,isRecommand = true,rate = 0, inf = LanguageConfig.ui_payInf_1},
-	[3] = {productName = "zgbky_50",productCode = "zgbky_50",show_moneyStr = "$50",show_goldStr = "2,500元寶",img = "pay_4.png",gold = 2500, money = 50, multiple = 2,isRecommand = false,rate = 0, inf = LanguageConfig.ui_payInf_1},	
-	[4] = {productName = "zgbky_100",productCode = "zgbky_100",show_moneyStr = "$100",show_goldStr = "5,000元寶",img = "pay_6.png",gold = 5000, money = 100, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
-	[5] = {productName = "zgbky_200",productCode = "zgbky_200",show_moneyStr = "$200",show_goldStr = "10,000元寶",img = "pay_5.png",gold = 10000, money = 200, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
-	[6] = {productName = "zgbky_5",productCode = "zgbky_5",show_moneyStr = "$5",show_goldStr = "250元寶",img = "pay_2.png",gold = 250, money = 5, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
-    [7] = {productName = "zgbky_1",productCode = "zgbky_1",show_moneyStr = "$1",show_goldStr = "50元寶",img = "pay_1.png",gold = 50, money = 1, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
+	[1] = {productName = "zgbky_moon",productCode = "zgbky_moon",show_moneyStr = "TWD 30",show_goldStr = "月卡+300元寶",img = "pay_9.png",gold = 300, money = 30, multiple = 1, isRecommand = true,rate = 0,inf = ""},
+	[2] = {productName = "zgbky_20",productCode = "zgbky_20",show_moneyStr = "TWD 590",show_goldStr = "1,000元寶",img = "pay_3.png",gold = 1000, money = 590, multiple = 2,isRecommand = true,rate = 0, inf = LanguageConfig.ui_payInf_1},
+	[3] = {productName = "zgbky_50",productCode = "zgbky_50",show_moneyStr = "TWD 1490",show_goldStr = "2,500元寶",img = "pay_4.png",gold = 2500, money = 1490, multiple = 2,isRecommand = false,rate = 0, inf = LanguageConfig.ui_payInf_1},	
+	[4] = {productName = "zgbky_100",productCode = "zgbky_100",show_moneyStr = "TWD 2990",show_goldStr = "5,000元寶",img = "pay_6.png",gold = 5000, money = 2990, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
+	[5] = {productName = "zgbky_200",productCode = "zgbky_200",show_moneyStr = "TWD 5990",show_goldStr = "10,000元寶",img = "pay_5.png",gold = 10000, money = 5990, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
+	[6] = {productName = "zgbky_5",productCode = "zgbky_5",show_moneyStr = "TWD 150",show_goldStr = "250元寶",img = "pay_2.png",gold = 250, money = 150, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
+    [7] = {productName = "zgbky_1",productCode = "zgbky_1",show_moneyStr = "TWD 30",show_goldStr = "50元寶",img = "pay_1.png",gold = 50, money = 30, multiple = 2, isRecommand = false,rate = 0,inf = LanguageConfig.ui_payInf_1},
 }
 g_payProductConfig_Qstore = 
 {
@@ -1539,7 +1539,7 @@ g_monthVip =
 	reward = {{78,4,1},{-3,4,2000000},{79,4,3}},
 	everyReward = {{-2,4,200},{43,4,10},{30,4,2}},
 	plus = 3,						               --剩余多少天才能购买月卡
-	RMB = 30,									   --对应月卡价格，一般情况下 一定不能改动
+	Gold = 300,									   --对应月卡价格
 }
 
 g_welfareInstructions = 
@@ -2207,3 +2207,12 @@ g_zkshop =
 	[6] = {pic = 1, goods = {{1,4,1},{2,4,2},{4,4,4}}, price = 1,name = "xx礼包"},
 	refreshSet = {1,2,3,4,5,6,7,8,9,10}
 }
+--今日充值
+g_todaySpePay = 
+{	
+	--vip对应段位设置 比如: {5,12}  : {0--4}一段 {5--11} 二段 {12 -- 最大} 三段, 目前结构仅支持三段
+	vip = {5,12},
+	--[133] = true,
+}
+--每日优惠价值
+g_everyPayInfo = {400,1000,1500,2000,2500}

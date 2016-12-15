@@ -660,17 +660,15 @@ function HuoDongPopView:ShowEveryDay()
         local button = widget:getChildByName("Image_chong_zhi_bg")
         local banModel = model:getChildByName("Image_chong_zhi_bg")
         Functions.initTextColor(banModel:getChildByName("Text_yuanjia_num"),button:getChildByName("Text_yuanjia_num"))
-        
+        local numGold = ActivityData:getEveryItemGold()
+        Functions.initLabelOfString(button:getChildByName("Text_yuanjia_num"), numGold[index])
         
         
         local FadeIn = cc.FadeIn:create(1)
         local FadeOut = cc.FadeOut:create(1)
         local play = cc.Sequence:create(FadeOut,FadeIn)
         local rep = cc.RepeatForever:create(play)--永久播放 （次数设为负数可以一直播放）
---        widget:runAction(rep)
---        
---        --动画
---        local blink = cc.Blink:create(2, 3)
+
         Functions.playAnimaWithCreateSprite(widget,rep,true, "lk/ui_res/HuoDongPopUI/chongzhi_2.png", cc.p( 355, 35 ),1.1)
         local param = {scale = 1, pos = cc.p( 355, 35 ) , zorder = 10, spriteName = "commonUI/res/lk/HuoDongPopUI/chongzhi_1.png"}
         local sp = Functions.createSprite(param)
@@ -700,9 +698,9 @@ function HuoDongPopView:ShowEveryDay()
             else
                 assert(false,"商店出售的商品类型 type = " .. data.m_ItemType .. "错误")
             end
-            local Price = ConfigHandler:getItemPrice(v.id,v.type) 
-            local numGold = Price*v.count
-            Functions.initLabelOfString(button:getChildByName("Text_yuanjia_num"), numGold)
+--            local Price = ConfigHandler:getItemPrice(v.id,v.type) 
+--            local numGold = Price*v.count
+--            Functions.initLabelOfString(button:getChildByName("Text_yuanjia_num"), numGold)
             
             
             local Image = "Image_"..tostring(k)

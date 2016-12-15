@@ -32,6 +32,7 @@ function MailOnePopView:onInitUI()
     self._ListView_mail_t = self.csbNode:getChildByName("Panel_1"):getChildByName("Sprite_mail_bg"):getChildByName("ListView_mail")
 	self._Image_get_t = self.csbNode:getChildByName("Panel_1"):getChildByName("Sprite_mail_bg"):getChildByName("ListView_mail"):getChildByName("model"):getChildByName("Button_mail_ban"):getChildByName("Image_get")
 	self._Image_name_sender_t = self.csbNode:getChildByName("Panel_1"):getChildByName("Sprite_mail_bg"):getChildByName("ListView_mail"):getChildByName("model"):getChildByName("Button_mail_ban"):getChildByName("Image_name_sender")
+	self._Text_mail_count_t = self.csbNode:getChildByName("Panel_1"):getChildByName("Text_mail_count")
 	
     --label list
     
@@ -164,6 +165,10 @@ function MailOnePopView:showRefresh()
     Functions.printInfo(self.debug," MailOnePopView view enter showMailList!")
     --排序
     --MailData:sort()
+    local mailDatas = MailData:getMailDatas()
+    local str = "("..tostring(#mailDatas).."/40)"
+    Functions.initLabelOfString(self._Text_mail_count_t, str)
+    
     local listHandler = function(index, widget, data, model)
 
         local button = widget:getChildByName("Button_mail_ban")
@@ -200,7 +205,7 @@ function MailOnePopView:showRefresh()
 
     end
     --绑定响应事件函数
-    Functions.bindListWithData(self._ListView_mail_t, MailData:getMailDatas(), listHandler)
+    Functions.bindListWithData(self._ListView_mail_t, mailDatas, listHandler)
 
 end
 
